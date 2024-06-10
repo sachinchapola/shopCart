@@ -1,0 +1,56 @@
+h3 {
+    font-size: 22px;
+    margin-top: 1.5rem;
+    font-weight: 700;
+}
+
+.box-container {
+    display: flex;
+}
+
+.card {
+    width: 15rem;
+    margin-top: 1.5rem;
+    background-color: rgba(244, 244, 244, 0.588);  
+}
+
+img {
+    mix-blend-mode: darken;  
+    height: 14rem;
+    width: auto;
+}
+
+h6 {
+    font-size: 15px;
+    margin: 7px 0;
+}
+
+span {
+    position: relative;
+    top: -1.8rem;
+    left: 11.5rem;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+p {
+    font-size: 10px;
+    position: relative;
+    top: -1.8rem;
+}
+
+button {
+    border-radius: 15px;
+    width: 6rem;
+    height: 2rem;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: rgb(255, 251, 251);
+    border: 1.2px solid black;
+}
+
+button:hover {
+    background-color: rgb(2, 44, 2);
+    color: rgb(255, 251, 251);
+    border: 1.2px solid rgb(2, 44, 2);
+}    

@@ -1,0 +1,86 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.nav-item {
+  font-size: 14px;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+form {
+  display: flex;
+  margin-right: 20rem;
+}
+
+.search-group {
+  height: 1.9rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ced4da;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem 0 0 2rem;
+  background-color: #f7f7f7;
+}
+
+.search-btn {
+  border: none;
+  background: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 2rem 2rem 0;
+  background-color: #f7f7f7;
+}
+
+header {
+  padding-top: 4rem;
+}
+
+.header-content {
+  width: 98%;
+  height: 12rem;
+  background-color: rgba(251, 226, 215, 0.7);
+}
+
+img {
+  width: 12rem;
+  mix-blend-mode: multiply;
+  position: relative;
+  left: 90px;
+}
+
+h2 {
+    margin: 1rem 5rem;
+    font-weight: 650;
+    color: rgb(17, 42, 17);
+}
+
+.btn {
+    width: 5rem;
+    height: 2rem;
+    font-size: 13px;
+    margin-left: 5rem;
+    border-radius: 2rem;
+    background: rgb(17, 42, 17);
+    color: white;
+    text-align: center;
+    border: none;
+}
