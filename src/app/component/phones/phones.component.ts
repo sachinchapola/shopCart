@@ -1,31 +1,31 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../service/product.service';
-import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-items',
+  selector: 'app-phones',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './items.component.html',
-  styleUrl: './items.component.css'
+  templateUrl: './phones.component.html',
+  styleUrl: './phones.component.css'
 })
-export class ItemsComponent implements OnInit {
-  getAllProduct: any;
+export class PhonesComponent implements OnInit {
+
+  getAllPhones: any = [];
 
   constructor(private productService: ProductService, private router: Router) { }
 
   ngOnInit(): void {
     this.productService.getAllProductList().subscribe((res) => {
-      const product = res.data.products;      
-      this.getAllProduct = product;
-      // console.log("::", this.getAllProduct);
+      const phones = res.data.products;
+
+      this.getAllPhones = phones.filter(item => item.category === 'Phone');
+      // console.log("allLaptop", this.getAllLaptop); 
     })
   }
 
-  onItemClick(id : any) {
-    console.log("::::", id);
+  onItemClick(id: any) {
     this.router.navigate(['/single-item'], {queryParams: {'key': id}});
   }
-
 }

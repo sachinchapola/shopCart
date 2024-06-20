@@ -1,7 +1,11 @@
 .navbar {
   position: fixed;
-  width: 100%;
-  z-index: 9999;
+  width: 96%;
+  z-index: 999;
+}
+
+.bg-color {
+  background-color: rgb(251, 251, 251);
 }
 
 .navbar-brand {
@@ -50,37 +54,18 @@ form {
   background-color: #f7f7f7;
 }
 
-header {
-  padding-top: 4rem;
+.cart {
+  /* border: 1px solid red; */
+  cursor: pointer;
 }
 
-.header-content {
-  width: 98%;
-  height: 12rem;
-  background-color: rgba(251, 226, 215, 0.7);
+.fa-cart-shopping {
+  font-size: 23px;
 }
 
-img {
-  width: 12rem;
-  mix-blend-mode: multiply;
+.cart span {
+  margin-left: 10px;
+  font-weight: 600;
   position: relative;
-  left: 90px;
-}
-
-h2 {
-    margin: 1rem 5rem;
-    font-weight: 650;
-    color: rgb(17, 42, 17);
-}
-
-.btn {
-    width: 5rem;
-    height: 2rem;
-    font-size: 13px;
-    margin-left: 5rem;
-    border-radius: 2rem;
-    background: rgb(17, 42, 17);
-    color: white;
-    text-align: center;
-    border: none;
+  top: -2px;
 }

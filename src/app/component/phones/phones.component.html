@@ -1,0 +1,48 @@
+<header>
+  <div class="header-content">
+    <div class="row">
+      <div class="col-6">
+        <h2>
+          Grab Upto 50% Off On <br />
+          Selected Headphone
+        </h2>
+        <button class="btn">Buy Now</button>
+      </div>
+      <div class="col-6">
+        <img src="header-img.png" alt="headphone" />
+      </div>
+    </div>
+  </div>
+</header>
+
+<h3>Phones For You!</h3>
+
+<div class="box-container">
+  <div class="row">
+    <div class="box col-3" *ngFor="let phone of getAllPhones">
+      <div class="card" (click)="onItemClick(phone.id)">
+        <img
+          [src]="phone.images[0]"
+          class="card-img-top"
+          alt="{{ phone.category }}"
+        />
+      </div>
+      <div class="desc">
+        <h6>{{ phone.name }}</h6>
+        <span>&dollar; {{ phone.price }}</span>
+        <p>{{ phone.description }}</p>
+        <p>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          ({{ phone.reviewsCount }})
+        </p>
+        <p>
+          <button>Add to Cart</button>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

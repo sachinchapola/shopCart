@@ -1,0 +1,48 @@
+<header>
+  <div class="header-content">
+    <div class="row">
+      <div class="col-6">
+        <h2>
+          Grab Upto 50% Off On <br />
+          Selected Headphone
+        </h2>
+        <button class="btn">Buy Now</button>
+      </div>
+      <div class="col-6">
+        <img src="header-img.png" alt="headphone" />
+      </div>
+    </div>
+  </div>
+</header>
+
+<h3>Laptop For You!</h3>
+
+<div class="box-container">
+  <div class="row">
+    <div class="box col-3" *ngFor="let laptop of getAllLaptop">
+      <div class="card" (click)="onItemClick(laptop.id)">
+        <img
+          [src]="laptop.images[0]"
+          class="card-img-top"
+          alt="{{ laptop.category }}"
+        />
+      </div>
+      <div class="desc">
+        <h6>{{ laptop.name }}</h6>
+        <span>&dollar; {{ laptop.price }}</span>
+        <p>{{ laptop.description }}</p>
+        <p>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          ({{ laptop.reviewsCount }})
+        </p>
+        <p>
+          <button>Add to Cart</button>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

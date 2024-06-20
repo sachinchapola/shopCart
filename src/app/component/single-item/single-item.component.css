@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.box {
+  /* border: 1px solid red; */
+  position: relative;
+  top: 7rem;
+}
+
+.image-section {
+  height: 35rem;
+  /* border: 1px solid red; */
+  background: rgb(245, 245, 245);
+  border-radius: 1rem;
+  padding: 3rem 2.5rem 2rem 9rem;
+}
+
+.image-section img {
+  width: 21rem;
+  height: auto;
+  mix-blend-mode: multiply;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.desc-section h1 {
+  font-weight: 700;
+}
+
+.desc-section {
+  /* border: 1px solid blue; */
+  padding-left: 7rem;
+}
+
+.desc-section p {
+  margin-top: 0.5rem;
+  font-size: 14px;
+  color: rgb(58, 57, 57);
+}
+
+.fa-star {
+  color: green;
+}
+
+hr {
+  margin: 1.4rem 0;
+}
+
+.desc-section h2 {
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.colors {
+  margin-bottom: 20px;
+}
+
+.colors h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.color-options {
+  display: flex;
+}
+
+.color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* ---------------------- plus-minus button -------------------*/
+.quantity-selector {
+  margin-top: 10px;
+  width: 80px;
+  height: 50px;
+  position: relative;
+  /* transform: translate(-50%, -50%); */
+  top: 0;
+  left: 0;
+  display: flex;
+  background-color: #ddd;
+  border-radius: 45px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0 );
+}
+
+input[type="number"] {
+  /* -moz-appearance: textfield; */
+  text-align: center;
+  font-size: 20px;
+  border: none;
+  background-color: rgb(245, 245, 245);
+  color: #202030;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity-selector button {
+  /* height: 50px; */
+  color: rgb(0, 51, 0);
+  background-color: rgb(245, 245, 245);
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.minus {
+  position: relative;
+  padding: 15px 5px 15px 25px;
+  border-radius: 45px 0 0 45px;
+}
+
+.plus {
+  padding: 15px 23px 15px 5px;
+  border-radius: 0 45px 45px 0;
+}
+
+.stock {
+  width: 200px;
+  position: relative;
+  top: -38px;
+  left: 170px;
+}
+
+.stock span {
+  color: orange;
+}
+
+.stock p {
+  margin-top: -0.3rem;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/*---------------------- purchase button -------------------------*/
+.purchase-buttons {
+  display: flex;
+  /* margin-top: 0rem; */
+}
+
+.purchase-buttons button {
+  width: 150px;
+  height: 40px;
+  border-radius: 2rem;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1.5px solid rgb(0, 51, 0);
+}
+
+.buy-now {
+  background-color: rgb(0, 51, 0);
+  color: #ddd;
+}
+
+.add-to-cart {
+  margin-left: 1rem;
+  color: rgb(0, 51, 0);
+  background-color: white;
+}
+
+/*------------------------- delivery info ---------------------------*/
+.all-info {
+  border: 1px solid #ddd;
+  margin-top: 35px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.all-info a {
+  color: black;
+}
+
+.delivery-info {
+  margin-top: 2px;
+}
+
+.delivery-info span,
+.return-info span {
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.delivery-info p,
+.return-info p {
+  margin-left: 50px;
+  color: black;
+}
+
+.bi-truck,
+.bi-recycle {
+  font-size: 22px;
+  margin-left: 18px;
+  color: orange;
+}
+
+.return-info {
+  margin-top: -10px;
+}
+
+/*----------------------------- image section ------------------*/
+.img-container {
+  display: flex;
+  gap: 20px; 
+  width: 100%;
+  max-width: 665px;
+  position: absolute;
+  top: 36rem;
+  left: 0rem;
+}
+
+.img-box {
+  width: 150px;
+  height: 147px;
+  flex: 0 0 auto;
+  display: inline-block;
+  background-color: rgb(245, 245, 245);
+  border-radius: 0.6rem;
+}
+
+.img-box img {
+  width: 80%;
+  height: 90%;
+  display: block;
+  margin: 0rem;
+  padding: 1rem 0rem 0.5rem 1.2rem;
+  mix-blend-mode: multiply;
+}
+
+/*---------------------------------- alert --------------------*/
+.buy-alert {
+  width: 23rem;
+  height: 28rem;
+  /* border: 1px solid red; */
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  position: fixed;
+  margin: 10rem 30rem;
+}
+
+.check-mark {
+  width: 6rem;
+  height: 6rem;
+  /* border: 1px solid green; */
+  margin: 5rem 8.5rem;
+  border-radius: 50%;
+  background-color: rgba(117, 227, 117, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-check {
+  font-size: 50px;
+  color: white;
+  font-weight: 600;
+}
+
+.buy-alert h2 {
+  font-size: 23px;
+  text-align: center;
+  margin-top: -2rem;
+  font-family: Arial ,sans-serif;
+  font-weight: 600;
+}
+
+.buy-alert p {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 1rem;
+  font-family: sans-serif;
+}
+
+.buy-alert button {
+  /* padding: 1rem 1rem; */
+  margin: 2rem 6.5rem;
+  font-size: 12px;
+  width: 10rem;
+  height: 2.2rem;
+  border-radius: 20px;
+  background-color: #fc8427;
+  color: white;
+}

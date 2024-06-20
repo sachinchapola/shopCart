@@ -1,6 +1,51 @@
+<header>
+  <div class="header-content">
+    <div class="row">
+      <div class="col-6">
+        <h2>Grab Upto 50% Off On <br> Selected Headphone</h2>
+        <button class="btn">Buy Now</button>
+      </div>
+      <div class="col-6">
+        <img src="header-img.png" alt="headphone" />
+      </div>
+    </div>
+  </div>
+</header>
+
 <h3>Headphones For You!</h3>
 
 <div class="box-container">
+  <div class="row">
+    <div class="box col-3" *ngFor="let product of getAllProduct">
+      <div class="card" (click)="onItemClick(product.id)">
+        <img
+          [src]="product.images[0]"
+          class="card-img-top"
+          alt="{{ product.category }}"
+        />
+      </div>
+      <div class="desc">
+        <h6>{{ product.name }}</h6>
+        <span>&dollar; {{ product.price }}</span>
+        <p>{{ product.description }}</p>
+        <p>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          ({{ product.reviewsCount }})
+        </p>
+        <p>
+          <button>Add to Cart</button>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="box-container">
   <div class="box col-3">
     <div class="card" >
       <img src="airpods.jpg" class="card-img-top" alt="airpods" />
@@ -233,4 +278,4 @@
         </p>
     </div>
   </div>
-</div>
+</div> -->

@@ -4,28 +4,28 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-items',
+  selector: 'app-headphones',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './items.component.html',
-  styleUrl: './items.component.css'
+  templateUrl: './headphones.component.html',
+  styleUrl: './headphones.component.css'
 })
-export class ItemsComponent implements OnInit {
-  getAllProduct: any;
+export class HeadphonesComponent implements OnInit {
+
+  getAllHeadphones: any = [];
 
   constructor(private productService: ProductService, private router: Router) { }
 
   ngOnInit(): void {
     this.productService.getAllProductList().subscribe((res) => {
-      const product = res.data.products;      
-      this.getAllProduct = product;
-      // console.log("::", this.getAllProduct);
+      const headphones = res.data.products;
+
+      this.getAllHeadphones = headphones.filter(item => item.category === 'Headphones');
+      // console.log("allLaptop", this.getAllLaptop); 
     })
   }
 
   onItemClick(id : any) {
-    console.log("::::", id);
     this.router.navigate(['/single-item'], {queryParams: {'key': id}});
   }
-
 }

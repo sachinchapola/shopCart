@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg bg-body">
+<nav class="navbar navbar-expand-lg bg-color">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Shopcart</a>
+    <a class="navbar-brand" routerLink="electronics-items">Shopcart</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -14,23 +14,23 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
-            href="#"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
             Categories
           </a>
-          <!-- <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul> -->
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="/laptop">Laptop</a></li>
+            <li><a class="dropdown-item"routerLink="/headphones">Headphones</a></li>
+            <li><a class="dropdown-item" routerLink="/phones">Phone</a></li>
+          </ul>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="#">Deals</a>
         </li>
@@ -43,32 +43,26 @@
         </li>
       </ul>
 
-      <form>
+      <form (submit)="onSearchItems(searchInput.value)">
         <div class="search-group">
           <input
+          #searchInput
             class="search-input"
             type="search"
             placeholder="Search Product"
           />
-          <button class="search-btn" type="button">
+          <button class="search-btn" type="button" (click)="onSearchItems(searchInput.value)">
             <i class="bi bi-search"></i>
           </button>
         </div>
       </form>
+
+      <div class="cart" routerLink="cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>Cart</span>
+      </div>
     </div>
   </div>
 </nav>
 
-<header>
-  <div class="header-content">
-    <div class="row">
-      <div class="col-6">
-        <h2>Grab Upto 50% Off On <br> Selected Headphone</h2>
-        <button class="btn">Buy Now</button>
-      </div>
-      <div class="col-6">
-        <img src="header-img.png" alt="headphone" />
-      </div>
-    </div>
-  </div>
-</header>
+<router-outlet></router-outlet>
