@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class PhonesComponent implements OnInit {
 
-  getAllPhones: any = [];
+  getAllMoblies: any = [];
 
   constructor(private productService: ProductService, private router: Router) { }
 
@@ -20,8 +20,8 @@ export class PhonesComponent implements OnInit {
     this.productService.getAllProductList().subscribe((res) => {
       const phones = res.data.products;
 
-      this.getAllPhones = phones.filter(item => item.category === 'Phone');
-      // console.log("allLaptop", this.getAllLaptop); 
+      this.getAllMoblies = phones.filter(item => item.category === 'Mobile');
+      // console.log("getAllMoblies", this.getAllMoblies); 
     })
   }
 

@@ -27,7 +27,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" routerLink="/laptop">Laptop</a></li>
             <li><a class="dropdown-item"routerLink="/headphones">Headphones</a></li>
-            <li><a class="dropdown-item" routerLink="/phones">Phone</a></li>
+            <li><a class="dropdown-item" routerLink="/mobile">Mobile</a></li>
           </ul>
         </li>
 
@@ -46,12 +46,12 @@
       <form (submit)="onSearchItems(searchInput.value)">
         <div class="search-group">
           <input
-          #searchInput
+            #searchInput
             class="search-input"
             type="search"
             placeholder="Search Product"
           />
-          <button class="search-btn" type="button" (click)="onSearchItems(searchInput.value)">
+          <button class="search-btn" type="submit">
             <i class="bi bi-search"></i>
           </button>
         </div>

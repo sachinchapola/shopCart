@@ -21,7 +21,7 @@ export class HeadphonesComponent implements OnInit {
       const headphones = res.data.products;
 
       this.getAllHeadphones = headphones.filter(item => item.category === 'Headphones');
-      // console.log("allLaptop", this.getAllLaptop); 
+      // console.log("getAllHeadphones", this.getAllHeadphones); 
     })
   }
 

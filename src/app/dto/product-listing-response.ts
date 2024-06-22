@@ -71,7 +71,7 @@ export class ProductListingAllResponse {
             'https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/i/a/r/-original-imagtrf9qm3dufq9.jpeg?q=70',
             'https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/n/i/d/-original-imagpgx4erjqnpzx.jpeg?q=70'
           ],
-          category: 'Phone',
+          category: 'Mobile',
           brand: 'Google Pixel',
           tags: ['google pixel', 'phone', 'camera', 'audio'],
           colors: ['Sea', 'Snow', 'Coral', 'Charcoal']
@@ -247,7 +247,7 @@ export class ProductListingAllResponse {
             'https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/f/l/g/-original-imagtc5frtz9j7tb.jpeg?q=70',
             'https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/j/z/3/-original-imagtc5fqyz8tu4c.jpeg?q=70'
           ],
-          category: 'Phone',
+          category: 'Mobile',
           brand: 'Apple',
           tags: [
             'apple', 'iphone', 'camera'],
@@ -287,7 +287,7 @@ export class ProductListingAllResponse {
             'https://m.media-amazon.com/images/I/617l83eY1rL._AC_UF1000,1000_QL80_.jpg',
             'https://m.media-amazon.com/images/I/610Q2I5Or8L._AC_UF1000,1000_QL80_.jpg'
           ],
-          category: 'Phone',
+          category: 'Mobile',
           brand: 'Samsung',
           tags: ['samsung', 'phone', 'camera'],
           colors: ['Cream', 'Graphite', 'Mint', 'Purple']

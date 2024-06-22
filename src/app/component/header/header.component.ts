@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ProductService } from '../../service/product.service';
 import { FormsModule } from '@angular/forms';
+import { SearchService } from '../../service/search.service';
 
 @Component({
   selector: 'app-header',
@@ -12,18 +12,13 @@ import { FormsModule } from '@angular/forms';
 })
 export class HeaderComponent {
 
-  constructor(private productService: ProductService) { }
+  constructor(private searchService: SearchService) { }
 
-  onSearchItems(searchQuery:any) {
-    console.log("::::::",searchQuery);
-    this.productService.getAllProductList().subscribe((res) => {
-      const product = res.data.products;
-      console.log(product);      
-
-      const selectedItem = product.filter(item => item.category === searchQuery);
-      console.log(selectedItem);
-    })
-   
-    
+  onSearchItems(searchQuery: string) {
+    if (searchQuery.trim() === '') {
+      console.log('Please enter a search query.');
+      return;
+    } 
+    this.searchService.changeSearchQuery(searchQuery);
   }
 }
