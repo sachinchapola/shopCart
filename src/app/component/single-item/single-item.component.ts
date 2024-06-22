@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../service/product.service';
-import { ProductListInterface } from '../../dto/product-list-interface';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -13,9 +12,10 @@ import { CommonModule } from '@angular/common';
 })
 export class SingleItemComponent implements OnInit{
   singleItem: any;
-  colors: any = [];
-  images: any = [];
+  colors: string[] = [];
+  images: string[] = [];
   buyNowPopUp = false;
+  // currentImage: string | undefined;
 
   constructor(private productService: ProductService, private route: ActivatedRoute, private router: Router) { }
 
@@ -55,5 +55,9 @@ export class SingleItemComponent implements OnInit{
 
   onButtonClick() {
     this.router.navigate(['/']);
+  }
+
+  changeimage(image: string) {
+    this.images[0] = image;
   }
 }

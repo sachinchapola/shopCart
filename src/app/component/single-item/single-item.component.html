@@ -1,11 +1,11 @@
 <div class="box">
   <div class="card" *ngFor="let item of singleItem">
     <div class="row container">
-      <div class="col-6 image-section" *ngIf="images.length > 0">
+      <div class="col-6 image-section" *ngIf="images.length > 0" >
         <img [src]="images[0]" alt="{{ item.name }}" />
 
         <div class="img-container">
-          <div class="img-box" *ngFor="let image of images.slice(1, 6)">
+          <div class="img-box" *ngFor="let image of images.slice(1, 6)" (click)="changeimage(image)">
             <img [src]="image" alt="Product Image">
           </div>
         </div>
