@@ -5,6 +5,7 @@ import { AddToCartComponent } from './component/add-to-cart/add-to-cart.componen
 import { LaptopComponent } from './component/laptop/laptop.component';
 import { HeadphonesComponent } from './component/headphones/headphones.component';
 import { PhonesComponent } from './component/phones/phones.component';
+import { WatchComponent } from './component/watch/watch.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'electronics-items', pathMatch: 'full' },
@@ -15,4 +16,5 @@ export const routes: Routes = [
   { path: 'laptop', component: LaptopComponent},
   { path: 'headphones', component: HeadphonesComponent},
   { path: 'mobile', component: PhonesComponent},
+  { path: 'watch', component: WatchComponent}
 ];

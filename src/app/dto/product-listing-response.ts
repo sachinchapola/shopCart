@@ -110,9 +110,30 @@ export class ProductListingAllResponse {
             'https://m.media-amazon.com/images/I/41rJ+ha25XL._SY300_SX300_.jpg'
           ],
           category: 'Laptop',
-          brand: 'ASUS',
+          brand: 'Asus',
           tags: ['asus', 'laptop', ],
           colors: ['Silver']
+        },
+        {
+          id: '1021',
+          name: 'Apple Watch Ultra 2',
+          description: 'GPS + Cellular 49mm Titanium Case with White Ocean Band',
+          price: 999.99,
+          currency: 'USD',
+          inStock: true,
+          rating: 4.9,
+          reviewsCount: 2530,
+          images: [
+            'https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/u/f/b/-original-imagtcnufgp5ffxc.jpeg?q=70',
+            'https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/y/7/j/-original-imagtcnuwsv5nysz.jpeg?q=70',
+            'https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/n/c/g/-original-imagtcnuvenczfp8.jpeg?q=70',
+            'https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/x/e/p/-original-imagtcnua3fv2xrb.jpeg?q=70',
+            'https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/a/f/9/-original-imagtcnu5qmbkms7.jpeg?q=70'
+          ],
+          category: 'Watch',
+          brand: 'Apple',
+          tags: ['apple', 'watch', 'gps'],
+          colors: ['Orange', 'White Ocean', 'Blue', 'Beige', 'Olive Green']
         },
         {
           id: '1004',
