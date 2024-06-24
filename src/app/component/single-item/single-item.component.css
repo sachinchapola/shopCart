@@ -1,13 +1,16 @@
 * {
   margin: 0;
   padding: 0;
-  border: none;
 }
 
 .box {
   /* border: 1px solid red; */
   position: relative;
   top: 7rem;
+}
+
+.card {
+  border: none;
 }
 
 .image-section {
@@ -26,12 +29,13 @@
   margin-top: 2.5rem;
 }
 
+/*----------------------- description -----------------------*/
+
 .desc-section h1 {
   font-weight: 700;
 }
 
 .desc-section {
-  /* border: 1px solid blue; */
   padding-left: 7rem;
 }
 
@@ -46,7 +50,7 @@
 }
 
 hr {
-  margin: 1.4rem 0;
+  margin: 1.5rem 0rem;
 }
 
 .desc-section h2 {
@@ -207,7 +211,7 @@ input::-webkit-inner-spin-button {
 }
 
 .return-info {
-  margin-top: -10px;
+  margin-top: -5px;
 }
 
 /*----------------------------- image section ------------------*/
