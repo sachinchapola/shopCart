@@ -12,6 +12,10 @@
   </div>
 </header>
 
+<div class="filter">
+  <button class="price" type="button" (click)="applyPriceFilter()">Price</button>
+</div>
+
 <h3>Headphones For You!</h3>
 
 <div class="box-container">
@@ -28,7 +32,7 @@
         <h6>{{ product.name }}</h6>
         <span>&dollar; {{ product.price }}</span>
         <p>{{ product.description }}</p>
-        <p>
+        <p >
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>

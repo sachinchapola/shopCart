@@ -255,6 +255,7 @@ input::-webkit-inner-spin-button {
   margin: 10rem 30rem;
 }
 
+
 .check-mark {
   width: 6rem;
   height: 6rem;
@@ -297,4 +298,10 @@ input::-webkit-inner-spin-button {
   border-radius: 20px;
   background-color: #fc8427;
   color: white;
+  border: none;
+}
+
+.buy-alert button:hover {
+  transform: translateY(1px);
+  box-shadow: 0.4px 0.8px  rgba(0, 0, 0, 0.3);
 }

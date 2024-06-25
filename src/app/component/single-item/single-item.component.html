@@ -38,16 +38,16 @@
         <hr />
 
         <div class="quantity-selector">
-          <button class="minus">-</button>
+          <button class="minus" type="button" (click)="decrement()">-</button>
           <input
             type="number"
-            value="1"
+            [value]="quantity"
             min="1"
             max="12"
             class="my-input"
             readonly
           />
-          <button class="plus">+</button>
+          <button class="plus" type="button" (click)="increment()">+</button>
         </div>
         <div class="stock">
           <p>Only <span>12 Items</span> Left!</p>

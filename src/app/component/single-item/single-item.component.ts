@@ -17,6 +17,8 @@ export class SingleItemComponent implements OnInit {
   images: any;
   buyNowPopUp = false;
   quantity: number = 1;
+  maxQuantity: number = 12;
+  minQuantity: number = 1;
 
   constructor(
     private productService: ProductService,
@@ -60,10 +62,21 @@ export class SingleItemComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
-  addToCart() {
-  }
+  addToCart() {}
 
   changeimage(image: string) {
     this.images[0] = image;
+  }
+
+  increment() {
+    if(this.quantity < this.maxQuantity) {
+      this.quantity++;
+    };
+  }
+
+  decrement() {
+    if(this.quantity > this.minQuantity) {
+      this.quantity--;
+    };
   }
 }

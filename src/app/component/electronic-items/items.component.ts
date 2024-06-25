@@ -32,6 +32,7 @@ export class ItemsComponent implements OnInit {
         this.filterProducts();
       });
     });
+
   }
 
   filterProducts() {
@@ -49,7 +50,10 @@ export class ItemsComponent implements OnInit {
   }
 
   onItemClick(id: any) {
-    // console.log("::::", id);
     this.router.navigate(['/single-item'], { queryParams: { key: id } });
+  }
+
+  applyPriceFilter() {
+    
   }
 }

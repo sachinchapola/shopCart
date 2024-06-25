@@ -32,15 +32,15 @@
           </ul>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="#">Deals</a>
+        <li class="nav-item" *ngIf="!isSearchHovered">
+          <a class="nav-link deals" href="#">Deals</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">What's New</a>
+        <li class="nav-item" *ngIf="!isSearchHovered">
+          <a class="nav-link new" href="#">What's New</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link">Delivery</a>
+        <li class="nav-item" *ngIf="!isSearchHovered">
+          <a class="nav-link delivery">Delivery</a>
         </li>
       </ul>
 
@@ -50,7 +50,10 @@
             #searchInput
             class="search-input"
             type="search"
+            aria-label="Search"
             placeholder="Search Product"
+            (mouseover)="onSearchHover(true)"
+            (mouseout)="onSearchHover(false)"
           />
           <button class="search-btn" type="submit">
             <i class="bi bi-search"></i>
