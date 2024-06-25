@@ -45,15 +45,13 @@
       </ul>
 
       <form (submit)="onSearchItems(searchInput.value)">
-        <div class="search-group">
+        <div class="search-group" (mouseover)="onSearchHover(true)" (mouseout)="onSearchHover(false)">
           <input
             #searchInput
             class="search-input"
-            type="search"
+            type="text"
             aria-label="Search"
             placeholder="Search Product"
-            (mouseover)="onSearchHover(true)"
-            (mouseout)="onSearchHover(false)"
           />
           <button class="search-btn" type="submit">
             <i class="bi bi-search"></i>

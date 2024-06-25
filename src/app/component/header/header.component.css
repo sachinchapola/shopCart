@@ -42,8 +42,8 @@ form {
   background-color: #f7f7f7;
 }
 
-.search-input:hover {
-  width: 34rem;
+.search-group:hover {
+  width: 36rem;
 }
 
 .search-btn {
@@ -59,7 +59,6 @@ form {
 }
 
 .cart {
-  /* border: 1px solid red; */
   cursor: pointer;
 }
 

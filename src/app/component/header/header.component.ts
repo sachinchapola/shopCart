@@ -23,7 +23,6 @@ export class HeaderComponent {
   onSearchItems(searchQuery: string) {
     if (searchQuery.trim() === '') {
       console.log('Please enter a search query.');
-      return;
     } 
     this.searchService.changeSearchQuery(searchQuery);
   }
