@@ -32,7 +32,6 @@ export class ItemsComponent implements OnInit {
         this.filterProducts();
       });
     });
-
   }
 
   filterProducts() {
@@ -54,6 +53,10 @@ export class ItemsComponent implements OnInit {
   }
 
   applyPriceFilter() {
-    
+    this.products.sort((a,b) => a.price - b.price);
+  }
+
+  applyReviewFilter() {
+    return this.products.sort((a,b) => a.reviewsCount - b.reviewsCount);
   }
 }
