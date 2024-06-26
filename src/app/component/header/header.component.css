@@ -33,6 +33,10 @@ form {
   overflow: hidden;
 }
 
+.search-group:hover {
+  width: 41rem;
+}
+
 .search-input {
   flex: 1;
   border: none;
@@ -40,10 +44,6 @@ form {
   padding: 0.5rem 1rem;
   border-radius: 2rem 0 0 2rem;
   background-color: #f7f7f7;
-}
-
-.search-group:hover {
-  width: 36rem;
 }
 
 .search-btn {
@@ -72,3 +72,55 @@ form {
   position: relative;
   top: -2px;
 }
+
+/*--------- Media Quries for Responsiveness --------------*/
+
+/* Small devices (phone, 500px and down ) */
+@media (max-width: 500px){
+  .navbar {
+    width: 100%;
+    left: 0;
+  }
+
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  .nav-item {
+    font-size: 14px;
+    padding-left: 2rem;
+    font-weight: 500;
+  }
+
+  form {
+    display: flex;
+    margin-right: 1rem;
+  }
+
+  .search-group {
+    width: 100%;
+    margin-left: 1rem;
+  }
+
+  .search-group:hover {
+    width: 100%;
+  }
+
+  .cart {
+    margin: 0.5rem 0rem 0rem 1rem;
+  }
+
+  .fa-cart-shopping {
+    font-size: 20px;
+  }
+
+  .cart span {
+    margin-left: 10px;
+    font-weight: 600;
+    position: relative;
+    top: -2px;
+  }
+}
+
+
+
