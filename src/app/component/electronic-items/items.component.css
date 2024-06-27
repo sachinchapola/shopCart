@@ -81,14 +81,6 @@ h3 {
   margin-left: -11.5rem;
 }
 
-.desc {
-  display: block;
-  /* border: 1px solid red; */
-  width: 18rem;
-  height: auto;
-  overflow: hidden;
-}
-
 h6 {
   font-size: 15px;
   margin: 7px 0;
@@ -96,6 +88,14 @@ h6 {
 
 .fa-star {
   color: green;
+}
+
+.desc {
+  display: block;
+  /* border: 1px solid red; */
+  width: 18rem;
+  height: auto;
+  overflow: hidden;
 }
 
 .desc1 {

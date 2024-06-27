@@ -13,10 +13,11 @@ header {
 }
 
 img {
-  width: 12rem;
+  width: 15rem;
   mix-blend-mode: multiply;
   position: relative;
   left: 90px;
+  top: 0rem;
 }
 
 h2 {
@@ -37,6 +38,14 @@ h2 {
   text-align: center;
   border: none;
   font-weight: 400;
+}
+
+.btn:hover {
+  background: rgba(25, 74, 25, 0.925);
+  color: white;
+  border: none;
+  transform: translateY(1px);
+  box-shadow: 0.4px 0.8px rgba(0, 0, 0, 0.3);
 }
 
 h3 {
@@ -64,7 +73,7 @@ h3 {
   background-color: rgba(244, 244, 244, 0.588);
 }
 
-img {
+.card img {
   mix-blend-mode: darken;
   height: 14rem;
   width: auto;
@@ -89,6 +98,11 @@ h6 {
   overflow: hidden;
 }
 
+.desc1 {
+  height: 2rem;
+  overflow: hidden;
+}
+
 .desc span {
   font-weight: 700;
   font-size: 14px;
@@ -104,7 +118,7 @@ h6 {
   margin-bottom: 0.2rem;
 }
 
-button {
+.desc button {
   border-radius: 15px;
   width: 6rem;
   height: 1.8rem;
@@ -115,8 +129,106 @@ button {
   margin-top: 0.5rem;
 }
 
-button:hover {
+.desc button:hover {
   background-color: rgb(2, 44, 2);
   color: rgb(255, 251, 251);
   border: 1.2px solid rgb(2, 44, 2);
+}
+
+/*--------- Media Quries for Responsiveness --------------*/
+/* Small devices (phone, 500px and down ) */
+@media (max-width: 500px) {
+  .header-content {
+    max-height: 12rem;
+    min-width: 28rem;
+  }
+
+  img {
+    max-width: 11rem;
+    max-height: 11rem;
+    mix-blend-mode: multiply;
+    position: relative;
+    left: 20px;
+    top: 0rem;
+  }
+
+  h2 {
+    /* border: 1px solid red; */
+    min-width: 11rem;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    top: -1.8rem;
+    left: -3.5rem;
+  }
+
+  .btn {
+    max-width: 6rem;
+    max-height: 2rem;
+    text-align: center;
+    border: none;
+    position: relative;
+    top: -2.5rem;
+    left: -2.6rem;
+  }
+
+  h3 {
+    min-width: 20rem;
+    font-size: 18px;
+  }
+
+  .box-container {
+    height: auto;
+  }
+
+  .box {
+    display: flex;
+    margin-top: 1rem;
+    min-width: 28rem;
+  }
+
+  .card {
+    max-width: 18rem;
+    max-height: 12rem;
+  }
+
+  .card img {
+    max-height: 8rem;
+    margin-top: 2rem;
+    margin-left: -2.5rem;
+  }
+
+  .desc {
+    display: block;
+    /* border: 1px solid red; */
+    max-width: 18rem;
+    height: auto;
+    overflow: hidden;
+  }
+
+  h6 {
+    font-size: 20px;
+    text-align: left;
+    margin: 7px 0;
+    padding-left: 0.5rem;
+  }
+
+  .desc span {
+    font-size: 14px;
+    position: relative;
+    top: 3rem;
+    left: 0.5rem;
+  }
+
+  .desc p {
+    padding-left: 0.5rem;
+    position: relative;
+    top: -1.5rem;
+    margin-bottom: 0.2rem;
+  }
+
+  p button {
+    position: relative;
+    top: 1rem;
+  }
 }

@@ -37,8 +37,8 @@ export class ProductListingAllResponse {
         },
         {
           id: '1001',
-          name: 'Wireless Earbuds, IPX8',
-          description: 'Organic Cotton, fairtrade certified',
+          name: 'Noise Buds VS102 Plus',
+          description: 'Noise Buds VS102 Plus with 70 Hrs Playtime, Environmental Noise Cancellation, Quad Mic Bluetooth Gaming Headset',
           price: 89.29,
           currency: 'USD',
           inStock: true,
@@ -138,7 +138,7 @@ export class ProductListingAllResponse {
         {
           id: '1004',
           name: 'Boult Z40',
-          description: 'Wireless Earbuds With Mic',
+          description: 'Boult Z40 with Zen ENC Mic, 60H Battery Life, Low Latency Gaming, Made In India, 5.3 Bluetooth Headset ',
           price: 39.25,
           currency: 'USD',
           inStock: true,
@@ -159,7 +159,7 @@ export class ProductListingAllResponse {
         {
           id: '1005',
           name: 'JBL TUNE 600BTNC',
-          description: 'Premium Bass. On-Ear Bluetooth',
+          description: 'Premium Bass  Hi-Res Audio with DAC , 3-Button EQ , Compatible with USB-C Devices Wired Headset',
           price: 59.09,
           currency: 'USD',
           inStock: true,
@@ -199,7 +199,7 @@ export class ProductListingAllResponse {
         {
           id: '1007',
           name: 'Samsung Galaxy Buds2 Pro',
-          description: 'True Wireless Earbuds w/ Active Noise Cancelling',
+          description: 'True Wireless Earbuds with Active Noise Cancelling',
           price: 199.99,
           currency: 'USD',
           inStock: true,
@@ -219,7 +219,7 @@ export class ProductListingAllResponse {
           id: '1008',
           name: 'Sony WF-1000XM4',
           description:
-            'Industry Leading Noise Canceling Truly Wireless Earbuds',
+            'SONY WF-1000XM4 with 36 Hrs Playtime and Industry Leading Noise Cancellation Bluetooth Headset',
           price: 279.99,
           currency: 'USD',
           inStock: true,
@@ -237,7 +237,7 @@ export class ProductListingAllResponse {
         {
           id: '1009',
           name: 'Apple AirPods Pro',
-          description: 'Active Noise Cancellation, Transparency Mode',
+          description: 'Active Noise Cancellation, Transparency Mode and More than 24 hours of total listening time with the MagSafe Charging Case',
           price: 249.79,
           currency: 'USD',
           inStock: true,
@@ -277,7 +277,7 @@ export class ProductListingAllResponse {
         {
           id: '1011',
           name: 'Sennheiser Momentum 3',
-          description: 'Wireless Noise Cancelling Headphones with Alexa',
+          description: 'Designed in Germany - Bluetooth Adaptive Noise Cancelling-ANC,4 Digital Mics for Crystal-Clear Calls,60h Battery, 2 Yr Warranty',
           price: 399.75,
           currency: 'USD',
           inStock: true,
@@ -316,7 +316,7 @@ export class ProductListingAllResponse {
         {
           id: '1013',
           name: 'Redmi Buds 5',
-          description: 'Around-Ear Wireless Headphone with Noise Cancellation',
+          description: 'REDMI Buds 5 with 46dB Hybrid Active Noise Cancellation, Dual-Mic AI Call Enhancement Bluetooth Headset',
           price: 199.95,
           currency: 'USD',
           inStock: true,
@@ -335,7 +335,7 @@ export class ProductListingAllResponse {
         {
           id: '1014',
           name: 'boAt Airpods 121v2',
-          description: 'Wireless Earbuds with Apple H1 Headphone Chip',
+          description: 'Wireless Earbuds with ASAP Charge: Courtesy our ASAP Charge technology, the earbuds can fetch up to 90 minutes of playback time in just 5 minutes of charging time.',
           price: 129.39,
           currency: 'USD',
           inStock: true,
@@ -354,7 +354,7 @@ export class ProductListingAllResponse {
         {
           id: '1015',
           name: 'Samsung Galaxy Buds',
-          description: 'Wireless Earbuds with Apple H1 Headphone Chip',
+          description: 'Wireless Earbuds with rystal clear voice & call quality with 3 mics & a Voice Pick Up unit Deep & spacious sound tuned by AKG. Sensors: Accelerometer, Gyro, Proximity, Hall, Touch, Grip, VPU',
           price: 212.65,
           currency: 'USD',
           inStock: true,
@@ -375,7 +375,7 @@ export class ProductListingAllResponse {
         {
           id: '1016',
           name: 'OnePlus Buds pro 2',
-          description: 'Wireless Earbuds with Apple H1 Headphone Chip',
+          description: 'Wireless Earbuds with A new version of the 169 firmware is now available for the OnePlus Buds Pro 2/2R. The latest release further optimizes the sound quality of the device.',
           price: 209.15,
           currency: 'USD',
           inStock: true,

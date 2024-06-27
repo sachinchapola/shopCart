@@ -348,13 +348,18 @@ input::-webkit-inner-spin-button {
 
   /*----------------------- description -----------------------*/
   .desc-section {
-    width: 93.4%;
+    min-width: 28rem;
     padding-left: 1rem;
     margin-top: 1rem;
   }
 
+  .desc-section h1 {
+    font-size: 27px;
+    font-weight: 700;
+  }
+
   .desc-section p {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
   }
 
