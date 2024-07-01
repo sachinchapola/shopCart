@@ -579,3 +579,148 @@ input::-webkit-inner-spin-button {
     margin: 2rem 5rem;
   }
 }
+
+/* small screen laptop (laptop, 1024px and down ) */
+@media (min-width: 769px) and (max-width: 1024px) { 
+  .box {
+    position: relative;
+    top: 7rem;
+  }
+  
+  .image-section {
+    width: 30rem;
+    height: 35rem;
+    background: rgb(245, 245, 245);
+    border-radius: 10px;
+    padding: 3rem 1rem 2rem 9rem;
+  }
+
+  .image-section img {
+    width: 21rem;
+    height: auto;
+    mix-blend-mode: multiply;
+    justify-content: center;
+    position: relative;
+    top: -0.5rem;
+    left: -4.5rem;
+  }
+
+  .img-container {
+    display: flex;
+    gap: 20px;
+    width: 30rem;
+    position: absolute;
+    top: 36rem;
+    left: 0rem;
+  }
+  
+  .img-box {
+    width: 6.55rem;
+    height: 6.5rem;
+    flex: 0 0 auto;
+    display: inline-block;
+    background-color: rgb(245, 245, 245);
+    border-radius: 8px;
+  }
+  
+  .img-box img {
+    width: 70%;
+    height: 80%;
+    display: block;
+    padding: 1.5rem 0rem 0rem 1rem;
+    margin-left: 5rem;
+    mix-blend-mode: multiply;
+  }
+
+  /*----------------------- description -----------------------*/
+  .desc-section {
+    width: 30rem;
+    padding-left: 1.3rem;
+  }
+
+  .desc-section h1 {
+    font-size: 35px;
+    font-weight: 700;
+  }
+
+  .desc-section p {
+    font-size: 14px;
+  }
+
+  hr {
+    margin: 1.2rem 0rem;
+  }
+
+  .color-circle {
+    max-width: 25px;
+    max-height: 25px;
+  }
+
+  /* ---------------------- plus-minus button -------------------*/
+  .quantity-selector {
+    max-width: 80px;
+    max-height: 50px;
+  }
+
+  .minus {
+    padding: 10px 5px 15px 25px;
+  }
+
+  .plus {
+    padding: 11px 23px 15px 5px;
+  }
+
+  .stock {
+    max-width: 200px;
+    position: relative;
+    top: -44px;
+    left: 170px;
+  }
+
+  .stock p {
+    margin-top: 0rem;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  /*---------------------- purchase button -------------------------*/
+  .purchase-buttons {
+    display: flex;
+    margin-top: -1.2rem;
+  }
+
+  .purchase-buttons button {
+    max-width: 130px;
+    height: 45px;
+  }
+
+  /*------------------------- delivery info ---------------------------*/
+  .all-info {
+    border: 1px solid #ddd;
+    margin-top: 35px;
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+  .return-info {
+    margin-top: -7px;
+  }
+
+  /*---------------------------------- alert --------------------*/
+  .buy-alert {
+    max-width: 20rem;
+    max-height: 28rem;
+    position: fixed;
+    margin: 7rem 22.5rem;
+  }
+
+  .check-mark {
+    max-width: 6rem;
+    max-height: 6rem;
+    margin: 5rem 7rem;
+  }
+
+  .buy-alert button {
+    margin: 2rem 5rem;
+  }
+}

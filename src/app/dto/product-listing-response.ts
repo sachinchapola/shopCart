@@ -117,7 +117,7 @@ export class ProductListingAllResponse {
         {
           id: '1021',
           name: 'Apple Watch Ultra 2',
-          description: 'GPS + Cellular 49mm Titanium Case with White Ocean Band',
+          description: 'The rugged 49mm titanium case comes with built-in GPS + Cellular connectivity and pairs with specialised, high-performance straps.',
           price: 999.99,
           currency: 'USD',
           inStock: true,

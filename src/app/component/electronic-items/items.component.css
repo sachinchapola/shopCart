@@ -277,8 +277,7 @@ h6 {
 }
 
 /* medium devices (tab, 768px and down ) */
-@media (min-width: 481px) and (max-width: 768px)
- {
+@media (min-width: 481px) and (max-width: 768px) {
   .header-content {
     margin-top: 1rem;
     max-height: 12rem;
@@ -384,3 +383,108 @@ h6 {
     top: 1.2rem;
   }   
 } 
+
+/* small screen laptop (laptop, 1024px and down ) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header-content {
+    margin-top: 1rem;
+    max-height: 12rem;
+    width: 60rem;
+    background-color: rgba(251, 226, 215, 0.7);
+  }
+
+  img {
+    max-width: 12rem;
+    max-height: 12rem;
+    mix-blend-mode: multiply;
+    position: relative;
+    top: 0rem;
+  }
+
+  h2 {
+    width: 16rem;
+    font-size: 22px;
+    text-align: center;
+    position: relative;
+    top: -0.8rem;
+    left: 0;
+  }  
+
+  .btn {
+    max-width: 6rem;
+    max-height: 2.3rem;
+    text-align: center;
+    border: none;
+    position: relative;
+    top: -1.2rem;
+    left: 1.8rem;
+  }
+
+  .filter {
+    margin-top: 1rem;
+  }
+
+  .filter button {
+    max-height: 1.8rem;
+    margin-right: 0.9rem;
+    width: 5rem;
+  }
+
+  h3 {
+    font-size: 21px;
+    margin-top: 1rem;
+    font-weight: 700;
+  }
+
+  .box-container {
+    width: 61rem;
+    height: auto;
+  }
+
+  .box {
+    display: block;
+    margin: 1rem 2.2rem 1rem 0rem;
+    width: 18rem;
+  }
+
+  .card {
+    width: 19rem;
+    max-height: 14rem;
+  }
+
+  .card img {
+    max-height: 11rem;
+    margin-top: 1.5rem;
+    margin-left: -11rem;
+  }
+
+  .desc {
+    display: block;
+    width: 19rem;
+    height: auto;
+    overflow: hidden;
+  }
+
+  h6 {
+    font-size: 18px;
+    margin: 7px 0;
+  }
+
+  .desc span {
+    font-size: 14px;
+    position: relative;
+    top: 3rem;
+    left: 0;
+  }
+
+  .desc p {
+    position: relative;
+    top: -1.5rem;
+    margin-bottom: 0.2rem;
+  }
+
+  p button {
+    position: relative;
+    top: 1.2rem;
+  } 
+}
