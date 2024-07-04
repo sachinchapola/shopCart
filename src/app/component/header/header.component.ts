@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit{
   ngOnInit(): void {
     this.cartService.getCartCount().subscribe(count =>{
       this.cartItemCount = count;
-      console.log("cartzCount", this.cartItemCount);
+      // console.log("cartzCount", this.cartItemCount);
 
     });
   }
@@ -32,19 +32,9 @@ export class HeaderComponent implements OnInit{
 
   onSearchItems(searchQuery: string) {
     if (searchQuery.trim() === '') {
-      console.log('Please enter a search query.');
+      // console.log('Please enter a search query.');
     } 
     this.searchService.changeSearchQuery(searchQuery);
-  }
-
-  onCartItemCount() {
-    this.cartService.getCartCount().subscribe(count =>{
-      this.cartItemCount = count;
-      console.log("cartzCount", this.cartItemCount);
-
-    });
-
-    
   }
 
 }

@@ -26,8 +26,8 @@ export class AddToCartComponent implements OnInit {
   }
 
   removeCartItem(productId: string) {
-     this.cartService.removeItems(productId);
-     console.log("productId:::::", productId);
+    this.cartService.removeItems(productId);
+    this.cartItemsList = this.cartService.getCartItems();
      
     
   }

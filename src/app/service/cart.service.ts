@@ -22,7 +22,7 @@ export class CartService {
     }
 
     this.cartItemList.push(cartItem);
-    console.log("Items added in the list:::", this.cartItemList);
+
     this.cartCountSubject .next(this.cartItemList.length)
 
   
@@ -31,8 +31,9 @@ export class CartService {
   }
 
   removeItems(productId: string) {
-    this.cartItemList = this.cartItemList.filter(items => items.productId !=productId)
-    console.log("Items removed from the list:::", this.cartItemList)
+    this.cartItemList = this.cartItemList.filter(items => items.productId != productId)
+    // console.log("Items removed from the list:::", this.cartItemList);
+    this.cartCountSubject.next(this.cartItemList.length);
   }
 
   getCartItems(): CartItem[]{
