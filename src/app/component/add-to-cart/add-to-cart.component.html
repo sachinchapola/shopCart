@@ -1,1 +1,14 @@
-<p>add-to-cart works!</p>
+<div class="container-fluid">
+    <div class="box" *ngFor="let cartItem of cartItemsList">
+        <div class="img-section">
+            <img [src]="cartItem.image" alt="{{ cartItem.name }}">
+            <hr>
+        </div>
+        <div class="detail-section">
+            <h2>{{ cartItem.name }}</h2>
+            <p>{{ cartItem.description }}</p>
+            <p class="price">&dollar;{{ cartItem.price }}</p>
+            <div class="remove" (click)="removeCartItem(cartItem.productId)">Remove</div>
+        </div>
+    </div>
+</div>

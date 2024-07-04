@@ -3,6 +3,7 @@ import { ProductService } from '../../service/product.service';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../../service/cart.service';
+import { CartItem } from '../../dto/cartItem-interface';
 
 @Component({
   selector: 'app-single-item',
@@ -12,6 +13,10 @@ import { CartService } from '../../service/cart.service';
   styleUrl: './single-item.component.css',
 })
 export class SingleItemComponent implements OnInit {
+  productId: any;
+  productName: any;
+  productDesc: any;
+  productPrice: any;
   singleItem: any;
   colors: string[] = [];
   images: any;
@@ -24,17 +29,15 @@ export class SingleItemComponent implements OnInit {
     private productService: ProductService,
     private route: ActivatedRoute,
     private router: Router,
-    private cartServics: CartService
+    private cartService: CartService
   ) {}
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
-      // console.log(":::::parsmd", params);
 
-      const id = params['key'];
-      // console.log(":::key", id);
+      this.productId = params['key'];
 
-      this.getSingleItem(id);
+      this.getSingleItem(this.productId);
     });
   }
 
@@ -43,9 +46,11 @@ export class SingleItemComponent implements OnInit {
       const data = res.data.products;
 
       this.singleItem = data.filter((item) => item.id === id);
-      // console.log("id", this.singleItem);
 
       if (this.singleItem.length > 0) {
+        this.productName = this.singleItem[0].name;
+        this.productDesc = this.singleItem[0].description;
+        this.productPrice = this.singleItem[0].price;
         this.colors = this.singleItem[0].colors;
         this.images = this.singleItem[0].images;
       } else {
@@ -62,7 +67,19 @@ export class SingleItemComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
-  addToCart() {}
+  addToCart() {
+    // set value to cartItem 
+    const cartItem: CartItem = {
+      productId: this.productId,
+      name: this.productName,
+      description: this.productDesc,
+      price: this.productPrice,
+      quantity: this.quantity,
+      image: this.images[0]
+    };
+
+    this.cartService.addItems(cartItem)
+  }
 
   changeimage(image: string) {
     this.images[0] = image;

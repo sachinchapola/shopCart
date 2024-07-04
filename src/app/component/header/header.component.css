@@ -73,6 +73,12 @@ form {
   top: -2px;
 }
 
+.count {
+  position: absolute;
+  top: 0px;
+  left: 97.3%;
+}
+
 /*--------- Media Quries for Responsiveness --------------*/
 
 /* Small devices (phone, 480px and down ) */
@@ -216,6 +222,12 @@ form {
     position: relative;
     top: -2px;
   }
+
+  .count {
+    position: absolute;
+    top: 10px;
+    left: 94%;
+   }
   
 }
 
