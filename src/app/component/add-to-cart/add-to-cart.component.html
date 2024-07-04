@@ -1,14 +1,34 @@
 <div class="container-fluid">
-    <div class="box" *ngFor="let cartItem of cartItemsList">
+  <div *ngIf="cartItemsList.length; else emptyCart">
+      <div class="box" *ngFor="let cartItem of cartItemsList">
         <div class="img-section">
-            <img [src]="cartItem.image" alt="{{ cartItem.name }}">
-            <hr>
+          <img [src]="cartItem.image" alt="{{ cartItem.name }}" />
+          <hr />
         </div>
         <div class="detail-section">
-            <h2>{{ cartItem.name }}</h2>
-            <p>{{ cartItem.description }}</p>
-            <p class="price">&dollar;{{ cartItem.price }}</p>
-            <div class="remove" (click)="removeCartItem(cartItem.productId)">Remove</div>
+          <h2>{{ cartItem.name }}</h2>
+          <p>{{ cartItem.description }}</p>
+          <p class="price">&dollar;{{ cartItem.price }}</p>
+          <div class="remove" (click)="removeCartItem(cartItem.productId)">
+            Remove
+          </div>
         </div>
+      </div>
+
+      <!-- <div class="place-order">
+        <button>Place order</button>
+      </div> -->
+  </div>
+  <ng-template #emptyCart>
+    <div class="empty-cart">
+        <i class="bi bi-cart-dash"></i>
+        <h2>Your cart is empty!</h2>
+        <button routerLink="" class="empty-cart-button">Shop now</button>
     </div>
+  </ng-template>
+</div>
+
+
+<div class="place-order" *ngIf="cartItemsList.length">
+  <button>Place order</button>
 </div>
