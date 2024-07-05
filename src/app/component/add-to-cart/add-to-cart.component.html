@@ -30,5 +30,15 @@
 
 
 <div class="place-order" *ngIf="cartItemsList.length">
-  <button>Place order</button>
+  <button (click)="openCartPopup()">Place order</button>
+</div>
+
+<div class="place-order-alert" *ngIf="placeOrderAlert">
+  <div class="check-mark">
+    <i class="fa-solid fa-check"></i>
+  </div>
+  <h2>Your order has been placed successfully.</h2>
+  <p>Estimate delivery between 3-4 business days.</p>
+  <p>Transection ID: 8984294820</p>
+  <button type="button" (click)="onButtonClick()">Continue Shopping</button>
 </div>

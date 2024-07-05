@@ -110,14 +110,75 @@ hr {
 }
 
 .place-order button {
-    padding: 0.4rem 2rem;
-    background-color: #ff9800;;
-    color: black;
-    font-weight: 630;
-    font-size: 17px;
-    border-radius: 8px;
-    border: none;
-    position: relative;
-    top: 13px;
-    right: 12px;
+  padding: 0.4rem 2rem;
+  background-color: #ff9800;
+  color: black;
+  font-weight: 630;
+  font-size: 17px;
+  border-radius: 8px;
+  border: none;
+  position: relative;
+  top: 13px;
+  right: 12px;
+}
+
+.place-order-alert {
+  width: 23rem;
+  height: 30rem;
+  /* border: 1px solid red; */
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  position: fixed;
+  margin: 0rem 17.5rem;
+}
+
+.check-mark {
+  width: 6rem;
+  height: 6rem;
+  /* border: 1px solid green; */
+  margin: 5rem 8.5rem;
+  border-radius: 50%;
+  background-color: rgba(117, 227, 117, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-check {
+  font-size: 50px;
+  color: white;
+  font-weight: 600;
+}
+
+.place-order-alert h2 {
+  font-size: 19px;
+  text-align: center;
+  margin-top: -3rem;
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+}
+
+.place-order-alert p {
+  text-align: center;
+  font-size: 12px;
+  padding-top: 0.5rem;
+  font-family: sans-serif;
+}
+
+.place-order-alert button {
+  /* padding: 1rem 1rem; */
+  margin: 2rem 6.5rem;
+  font-size: 12px;
+  width: 10rem;
+  height: 2.2rem;
+  border-radius: 20px;
+  background-color: #fc8427;
+  color: white;
+  border: none;
+}
+
+.place-order-alert button:hover {
+  transform: translateY(1px);
+  box-shadow: 0.4px 0.8px rgba(0, 0, 0, 0.3);
 }
