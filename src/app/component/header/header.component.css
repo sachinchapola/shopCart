@@ -82,7 +82,7 @@ form {
 /*--------- Media Quries for Responsiveness --------------*/
 
 /* Small devices (phone, 480px and down ) */
-@media (max-width: 480px){
+@media (max-width: 480px) {
   .navbar {
     width: 100%;
     left: 0;
@@ -113,7 +113,7 @@ form {
   }
 
   .cart {
-    margin: 0.7rem 0rem 0rem 1rem;
+    margin: 1rem 0rem 0rem 1rem;
   }
 
   .fa-cart-shopping {
@@ -126,10 +126,16 @@ form {
     position: relative;
     top: -2px;
   }
+
+  .count {
+    position: absolute;
+    top: 14.8rem;
+    left: 7.5%;
+  }
 }
 
 /* medium devices (tab, 768px and down ) */
-@media (min-width:481px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
   .navbar {
     width: 100%;
     left: 0;
@@ -160,7 +166,7 @@ form {
   }
 
   .cart {
-    margin: 0.7rem 0rem 0rem 1rem;
+    margin: 1rem 0rem 0rem 1rem;
   }
 
   .fa-cart-shopping {
@@ -172,6 +178,12 @@ form {
     font-weight: 600;
     position: relative;
     top: -2px;
+  }
+
+  .count {
+    position: absolute;
+    top: 16.1rem;
+    left: 4.8%;
   }
 }
 
@@ -227,10 +239,5 @@ form {
     position: absolute;
     top: 10px;
     left: 94%;
-   }
-  
+  }
 }
-
-
-
-
