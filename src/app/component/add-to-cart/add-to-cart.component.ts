@@ -30,7 +30,6 @@ export class AddToCartComponent implements OnInit {
   removeCartItem(productId: string) {
     this.cartService.removeItems(productId);
     this.cartItemsList = this.cartService.getCartItems();
-    
   }
 
   openCartPopup() {

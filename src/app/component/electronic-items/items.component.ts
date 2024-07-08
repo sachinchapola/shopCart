@@ -83,7 +83,7 @@ export class ItemsComponent implements OnInit {
       this.productName = selectedData[0].name;
       this.productDesc = selectedData[0].description;
       this.productPrice  = selectedData[0].price;
-      this.productImage = selectedData[0].images;
+      this.productImage = selectedData[0].images[0];
       
     }    
 
