@@ -21,10 +21,10 @@ export class AddToCartComponent implements OnInit {
 
   ngOnInit(): void {
     this.cartItemsList = this.cartService.getCartItems();
-    // console.log(":::::::::::::",this.cartItemsList);
+    console.log(":::::::::::::",this.cartItemsList);
 
     this.itemsCount = this.cartItemsList.length;
-    // console.log("itemsCount:::::::::::::",this.itemsCount);
+    console.log("itemsCount:::::::::::::",this.itemsCount);
   }
 
   removeCartItem(productId: string) {

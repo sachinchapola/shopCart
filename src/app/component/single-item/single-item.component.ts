@@ -77,6 +77,8 @@ export class SingleItemComponent implements OnInit {
       quantity: this.quantity,
       image: this.images[0]
     };
+    console.log(`add item in cart id = ${this.productId}`, cartItem);
+    
 
     this.cartService.addItems(cartItem)
   }

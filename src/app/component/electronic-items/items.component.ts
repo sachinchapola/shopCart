@@ -3,6 +3,9 @@ import { ProductService } from '../../service/product.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { SearchService } from '../../service/search.service';
+import { CartItem } from '../../dto/cartItem-interface';
+import { CartService } from '../../service/cart.service';
+import { ProductListInterface } from '../../dto/product-list-interface';
 
 @Component({
   selector: 'app-items',
@@ -12,20 +15,28 @@ import { SearchService } from '../../service/search.service';
   styleUrl: './items.component.css',
 })
 export class ItemsComponent implements OnInit {
-  products: any[] = [];
-  filteredProducts: any[] = [];
+  products: ProductListInterface[] = [];
+  filteredProducts: ProductListInterface[] = [];
   searchQuery: string = '';
+  productId: any;
+  productName: any;
+  productDesc: any;
+  productPrice: any;
+  productQty: number = 1;
+  productImage: any;
 
   constructor(
     private productService: ProductService,
     private router: Router,
-    private searchService: SearchService
+    private searchService: SearchService,
+    private cartService: CartService
   ) {}
 
   ngOnInit(): void {
     this.productService.getAllProductList().subscribe((res) => {
       this.products = res.data.products;
       this.filteredProducts = this.products;
+      
 
       this.searchService.currentSearchQuery.subscribe((query) => {
         this.searchQuery = query;
@@ -58,5 +69,33 @@ export class ItemsComponent implements OnInit {
 
   applyReviewFilter() {
     return this.products.sort((a,b) => a.reviewsCount - b.reviewsCount);
+  }
+
+  addToCart(id:any) {
+    
+    const data = this.products;
+
+    const selectedData:ProductListInterface[] = data.filter(item => item.id === id);
+    console.log(`ItemsComponent addToCart id = ${id}`, selectedData);
+    
+    if (selectedData.length ) {
+      this.productId = selectedData[0].id;
+      this.productName = selectedData[0].name;
+      this.productDesc = selectedData[0].description;
+      this.productPrice  = selectedData[0].price;
+      this.productImage = selectedData[0].images;
+      
+    }    
+
+    const cartItem: CartItem = {
+      productId: this.productId,
+      name: this.productName,
+      description: this.productDesc,
+      price: this.productPrice,
+      quantity: this.productQty,
+      image: this.productImage
+    }
+
+    this.cartService.addItems(cartItem);
   }
 }
