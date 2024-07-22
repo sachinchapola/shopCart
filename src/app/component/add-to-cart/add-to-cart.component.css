@@ -210,8 +210,10 @@ hr {
   .place-order-alert {
     width: 17rem;
     height: 24rem;
-    margin: -9rem 5rem;
-    
+    position: fixed;
+    top: 11rem;
+    left: -14rem;
+    /* margin: -9rem 5rem; */
   }
   
   .check-mark {
@@ -275,8 +277,10 @@ hr {
   .place-order-alert {
     width: 20rem;
     height: 25rem;
-    margin: -7rem 14rem;
-    
+    position: fixed;
+    top: 17rem;
+    left: -4.2rem;
+    /* margin: -7rem 14rem; */
   }
   
   .check-mark {
@@ -352,7 +356,6 @@ hr {
     width: 22rem;
     height: 27rem;
     /* margin: -7rem 20rem; */
-    
   }
   
   .check-mark {
