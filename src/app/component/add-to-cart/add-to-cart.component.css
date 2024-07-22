@@ -346,9 +346,12 @@ hr {
   }
   
   .place-order-alert {
+    position: fixed;
+    top: 17rem;
+    left: 3.5rem;
     width: 22rem;
     height: 27rem;
-    margin: -15rem 20rem;
+    /* margin: -7rem 20rem; */
     
   }
   
