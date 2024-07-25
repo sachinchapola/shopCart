@@ -32,11 +32,13 @@ export class AddToCartComponent implements OnInit {
     this.cartItemsList = this.cartService.getCartItems();
   }
 
-  openCartPopup() {
+  placeOrder() {
     this.placeOrderAlert = true;
   }
 
   onButtonClick() {
+    this.cartService.clearCart();
+
     this.router.navigate(['/']);
   }
 }

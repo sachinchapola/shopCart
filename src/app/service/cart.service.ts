@@ -44,5 +44,14 @@ export class CartService {
     return this.cartCountSubject.asObservable();
   }
 
+  clearCart() {
+    this.cartItemList = [];
+    this.updateCartItemCount();
+  }
+
+  private updateCartItemCount(): void {
+    this.cartCountSubject.next(this.cartItemList.length);
+  }
+
 }
 

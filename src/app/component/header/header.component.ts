@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { SearchService } from '../../service/search.service';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../../service/cart.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -12,17 +13,17 @@ import { CartService } from '../../service/cart.service';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent implements OnInit{
+export class HeaderComponent implements OnInit, OnDestroy{
   isSearchHovered: boolean = false;
-  cartItemCount = 0;
+  cartItemCount: number = 0;
+  private cartSubscription!: Subscription;
 
   constructor(private searchService: SearchService, private cartService: CartService) { }
 
   ngOnInit(): void {
-    this.cartService.getCartCount().subscribe(count =>{
+    this.cartSubscription = this.cartService.getCartCount().subscribe(count =>{
       this.cartItemCount = count;
       // console.log("cartzCount", this.cartItemCount);
-
     });
   }
 
@@ -35,6 +36,12 @@ export class HeaderComponent implements OnInit{
       // console.log('Please enter a search query.');
     } 
     this.searchService.changeSearchQuery(searchQuery);
+  }
+
+  ngOnDestroy(): void {
+    if (this.cartSubscription) {
+      this.cartSubscription.unsubscribe();
+    }
   }
 
 }
