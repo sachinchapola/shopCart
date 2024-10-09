@@ -19,7 +19,7 @@ export class ProductListingAllResponse {
       products: [
         {
           id: '1019',
-          name: 'HP Victus gaming AMD Ryzen 5',
+          name: 'HP Victus gaming',
           description: 'Hexa Core 5600H - (8 GB/512 GB SSD/4 GB Graphics/AMD Radeon RX 6500M/60 Hz) 15-fb0147AX Gaming Laptop',
           price: 597.82,
           currency: 'USD',

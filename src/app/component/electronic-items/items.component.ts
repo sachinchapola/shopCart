@@ -6,15 +6,18 @@ import { SearchService } from '../../service/search.service';
 import { CartItem } from '../../dto/cartItem-interface';
 import { CartService } from '../../service/cart.service';
 import { ProductListInterface } from '../../dto/product-list-interface';
+import { BannerSectionComponent } from "../banner-section/banner-section/banner-section.component";
 
 @Component({
   selector: 'app-items',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, BannerSectionComponent],
   templateUrl: './items.component.html',
   styleUrl: './items.component.css',
 })
 export class ItemsComponent implements OnInit {
+  allElectronicesItem: string = "All Electronic Items For You!";
+
   products: ProductListInterface[] = [];
   filteredProducts: ProductListInterface[] = [];
   searchQuery: string = '';

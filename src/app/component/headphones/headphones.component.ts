@@ -2,15 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../service/product.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { BannerSectionComponent } from "../banner-section/banner-section/banner-section.component";
 
 @Component({
   selector: 'app-headphones',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, BannerSectionComponent],
   templateUrl: './headphones.component.html',
   styleUrl: './headphones.component.css'
 })
 export class HeadphonesComponent implements OnInit {
+  AllHeadphones: string = "Headphones For You!";
 
   getAllHeadphones: any = [];
 

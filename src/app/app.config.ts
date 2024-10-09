@@ -4,11 +4,12 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { ProductListingAllResponse } from './dto/product-listing-response';
 import { BrowserModule } from '@angular/platform-browser';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    ProductListingAllResponse
+    ProductListingAllResponse, provideAnimationsAsync('noop')
   ],
 };

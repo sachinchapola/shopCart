@@ -1,71 +1,66 @@
-<nav class="navbar navbar-expand-lg bg-color">
-  <div class="container-fluid">
-    <a class="navbar-brand" routerLink="electronics-items">Shopcart</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="row d-flex align-items-center p-3">
 
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Categories
-          </a>
+        <div class="col-2">
+          <a class="brand" routerLink="electronics-items">Shopcart</a>
+        </div>
+
+        <div class="col-2 dropdown">
+          <button class="btn dropdown-toggle font" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Select categories
+          </button>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" routerLink="/laptop">Laptop</a></li>
             <li><a class="dropdown-item"routerLink="/headphones">Headphones</a></li>
             <li><a class="dropdown-item" routerLink="/mobile">Mobile</a></li>
             <li><a class="dropdown-item" routerLink="/watch">Watch</a></li>
           </ul>
-        </li>
-
-        <li class="nav-item" *ngIf="!isSearchHovered">
-          <a class="nav-link deals" href="#">Deals</a>
-        </li>
-        <li class="nav-item" *ngIf="!isSearchHovered">
-          <a class="nav-link new" href="#">What's New</a>
-        </li>
-
-        <li class="nav-item" *ngIf="!isSearchHovered">
-          <a class="nav-link delivery">Delivery</a>
-        </li>
-      </ul>
-
-      <form (submit)="onSearchItems(searchInput.value)">
-        <div class="search-group" (mouseover)="onSearchHover(true)" (mouseout)="onSearchHover(false)">
-          <input
-            #searchInput
-            class="search-input"
-            type="text"
-            aria-label="Search"
-            placeholder="Search Product"
-          />
-          <button class="search-btn" type="submit">
-            <i class="bi bi-search"></i>
-          </button>
         </div>
-      </form>
+        
+        <div class="col-6 d-flex align-items-center justify-content-around">
+          <div *ngIf="!isSearchHovered">
+            <a class="font" href="#">Deals</a>
+          </div>
+          <div  *ngIf="!isSearchHovered">
+            <a class="font" href="#">What's New</a>
+          </div>
+    
+          <div  *ngIf="!isSearchHovered">
+            <a class="font">Delivery</a>
+          </div>
+    
+          <div>
+            <form (submit)="onSearchItems(searchInput.value)">
+              <div class="search-group" (mouseover)="onSearchHover(true)" (mouseout)="onSearchHover(false)">
+                <input
+                  #searchInput
+                  class="search-input"
+                  type="text"
+                  aria-label="Search"
+                  placeholder="Search Product"
+                />
+                <button class="search-btn" type="submit">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
 
-      <div class="cart" routerLink="cart">
-        <i class="fa-solid fa-cart-shopping" ></i>
-        <div class="count" *ngIf="cartItemCount">{{ cartItemCount }}</div>
-        <span>Cart</span>
+        <div class="col-2 cart d-flex justify-content-end gap-2" routerLink="cart">
+          <div class="count" *ngIf="cartItemCount">{{ cartItemCount }}</div>
+          <div>
+            <i class="fa-solid fa-cart-shopping" ></i>
+          </div>
+          <div class="cart-text">Cart</div>
+        </div>
       </div>
+      
     </div>
   </div>
-</nav>
+</div>
+
 
 <router-outlet></router-outlet>
