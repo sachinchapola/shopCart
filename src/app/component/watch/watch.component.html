@@ -9,7 +9,7 @@
       </div>
 
       <div class="row mt-3">
-        <div class="col-3 mb-3" *ngFor="let watch of getAllWatches">
+        <div class="col-12 col-lg-3 col-md-3 col-sm-12 mb-3" *ngFor="let watch of getAllWatches">
           <div class="card h-100 d-flex flex-column" (click)="onItemClick(watch.id)">
             <div class="img-section">
               <img [src]="watch.images[0]" class="card-img-top" alt="{{ watch.category }}" />

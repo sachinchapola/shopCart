@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../service/product.service';
 import { Router } from '@angular/router';
-import { BannerSectionComponent } from "../banner-section/banner-section/banner-section.component";
+import { BannerSectionComponent } from "../banner-section/banner-section.component";
 
 @Component({
   selector: 'app-phones',

@@ -6,7 +6,7 @@ import { SearchService } from '../../service/search.service';
 import { CartItem } from '../../dto/cartItem-interface';
 import { CartService } from '../../service/cart.service';
 import { ProductListInterface } from '../../dto/product-list-interface';
-import { BannerSectionComponent } from "../banner-section/banner-section/banner-section.component";
+import { BannerSectionComponent } from "../banner-section/banner-section.component";
 
 @Component({
   selector: 'app-items',

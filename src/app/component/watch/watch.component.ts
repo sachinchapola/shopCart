@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductService } from '../../service/product.service';
 import { CommonModule } from '@angular/common';
-import { BannerSectionComponent } from "../banner-section/banner-section/banner-section.component";
+import { BannerSectionComponent } from "../banner-section/banner-section.component";
 
 @Component({
   selector: 'app-watch',
