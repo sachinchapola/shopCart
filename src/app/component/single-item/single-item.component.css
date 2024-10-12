@@ -1,3 +1,7 @@
+.m-top {
+  margin-top: 90px;
+}
+
 .box {
   /* border: 2px solid black; */
 }
@@ -206,8 +210,9 @@ input::-webkit-inner-spin-button {
 
 /*---------------------------------- alert --------------------*/
 .buy-alert {
-  width: 20rem;
-  height: 24rem;
+  /* width: 20rem;
+  height: 24rem; */
+  padding: 20px 34px;
   border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
@@ -216,7 +221,7 @@ input::-webkit-inner-spin-button {
 .check-mark {
   width: 6rem;
   height: 6rem;
-  margin: 3.5rem auto;
+  margin: 20px auto;
   border-radius: 50%;
   background-color: rgba(117, 227, 117, 0.9);
   display: flex;
@@ -233,7 +238,6 @@ input::-webkit-inner-spin-button {
 .buy-alert h2 {
   font-size: 23px;
   text-align: center;
-  margin-top: -2rem;
   font-family: Arial, sans-serif;
   font-weight: 600;
 }
@@ -252,6 +256,7 @@ input::-webkit-inner-spin-button {
   background-color: #fc8427;
   color: white;
   border: none;
+  margin-bottom: 20px;
 }
 
 .buy-alert button:hover {
