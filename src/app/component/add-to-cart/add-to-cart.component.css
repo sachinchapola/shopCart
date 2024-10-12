@@ -131,13 +131,10 @@ hr {
 }
 
 .place-order-alert {
-  width: 23rem;
-  height: 30rem;
+  padding: 20px;
   border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
-  /* position: fixed; */
-  /* margin: 0rem 17.5rem; */
 }
 
 .check-mark {
@@ -158,29 +155,27 @@ hr {
 }
 
 .place-order-alert h2 {
-  font-size: 19px;
+  font-size: 23px;
   text-align: center;
-  margin-top: -3rem;
   font-family: Arial, sans-serif;
   font-weight: 600;
 }
 
 .place-order-alert p {
   text-align: center;
-  font-size: 12px;
-  padding-top: 0.5rem;
+  font-size: 14px;
+  /* padding-top: 12px; */
   font-family: sans-serif;
 }
 
 .place-order-alert button {
-  margin: 2rem 6.5rem;
+  padding: 10px 30px;
   font-size: 12px;
-  width: 10rem;
-  height: 2.2rem;
   border-radius: 20px;
   background-color: #fc8427;
   color: white;
   border: none;
+  margin-bottom: 20px;
 }
 
 .place-order-alert button:hover {
