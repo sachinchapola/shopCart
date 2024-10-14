@@ -30,6 +30,5 @@ export class LaptopComponent implements OnInit {
   onItemClick(id : any) {
     this.router.navigate(['/single-item'], {queryParams: {'key': id}});
   }
-  
 
 }

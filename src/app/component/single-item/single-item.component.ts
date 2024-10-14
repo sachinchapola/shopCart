@@ -4,6 +4,8 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../../service/cart.service';
 import { CartItem } from '../../dto/cartItem-interface';
+import { BuyPopComponent } from '../buy-pop/buy-pop.component';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-single-item',
@@ -29,7 +31,8 @@ export class SingleItemComponent implements OnInit {
     private productService: ProductService,
     private route: ActivatedRoute,
     private router: Router,
-    private cartService: CartService
+    private cartService: CartService,
+    private matDialog: MatDialog
   ) {}
 
   ngOnInit(): void {
@@ -60,12 +63,16 @@ export class SingleItemComponent implements OnInit {
   }
 
   buyNow() {
-    this.buyNowPopUp = true;
+    // this.buyNowPopUp = true;
+    let dialogRef = this.matDialog.open(BuyPopComponent, {
+      // height: '350px',
+      // width: '400px',
+    }); 
   }
 
-  onButtonClick() {
-    this.router.navigate(['/']);
-  }
+  // onButtonClick() {
+  //   this.router.navigate(['/']);
+  // }
 
   addToCart() {
     // set value to cartItem 

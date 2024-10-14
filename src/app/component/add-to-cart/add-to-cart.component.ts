@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../service/cart.service';
 import { CartItem } from '../../dto/cartItem-interface';
 import { CommonModule } from '@angular/common';
-import { Router, RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { PlaceOrderPopComponent } from '../place-order-pop/place-order-pop.component';
 
 @Component({
   selector: 'app-add-to-cart',
@@ -15,9 +17,8 @@ export class AddToCartComponent implements OnInit {
 
   cartItemsList:CartItem[] = [];
   itemsCount = 0;
-  placeOrderAlert = false;
 
-  constructor(private cartService: CartService, private router: Router) { }
+  constructor(private cartService: CartService, private matDialog: MatDialog) { }
 
   ngOnInit(): void {
     this.cartItemsList = this.cartService.getCartItems();
@@ -33,12 +34,7 @@ export class AddToCartComponent implements OnInit {
   }
 
   placeOrder() {
-    this.placeOrderAlert = true;
-  }
-
-  onButtonClick() {
-    this.cartService.clearCart();
-
-    this.router.navigate(['/']);
+    // this.placeOrderAlert = true;
+    let dialogRef = this.matDialog.open(PlaceOrderPopComponent); 
   }
 }

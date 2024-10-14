@@ -205,61 +205,6 @@ input::-webkit-inner-spin-button {
   mix-blend-mode: multiply;
 }
 
-/*---------------------------------- alert --------------------*/
-.buy-alert {
-  /* width: 20rem;
-  height: 24rem; */
-  padding: 20px 34px;
-  border-radius: 25px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
-}
-
-.check-mark {
-  width: 6rem;
-  height: 6rem;
-  margin: 20px auto;
-  border-radius: 50%;
-  background-color: rgba(117, 227, 117, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.fa-check {
-  font-size: 50px;
-  color: white;
-  font-weight: 600;
-}
-
-.buy-alert h2 {
-  font-size: 23px;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  font-weight: 600;
-}
-
-.buy-alert p {
-  text-align: center;
-  font-size: 14px;
-  padding-top: 1rem;
-  font-family: sans-serif;
-}
-
-.buy-alert button {
-  padding: 10px 30px;
-  font-size: 12px;
-  border-radius: 20px;
-  background-color: #fc8427;
-  color: white;
-  border: none;
-  margin-bottom: 20px;
-}
-
-.buy-alert button:hover {
-  transform: translateY(1px);
-  box-shadow: 0.4px 0.8px rgba(0, 0, 0, 0.3);
-}
 
 @media (max-width: 767px) {
   .image-section {

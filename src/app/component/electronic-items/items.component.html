@@ -26,7 +26,9 @@
 
             <div class="card-body d-flex flex-column flex-grow-1">
               <div class="d-flex justify-content-between">
-                <div><h4>{{ product.name }}</h4></div>
+                <div>
+                  <h4>{{ product.name }}</h4>
+                </div>
                 <div><strong>&dollar; {{ product.price }}</strong></div>
               </div>
 
@@ -45,8 +47,14 @@
                 </p>
               </div>
 
-              <div >
-                <button class="btn w-100" (click)="addToCart(product.id)">Add to Cart</button>
+              <div class="row">
+                <div class="">
+                  <button class="btn w-100" (click)="addToCart(product.id)">Add to Cart</button>
+                  <!-- <button class="btn w-100">View deatils</button> -->
+                </div>
+                <div class="col-6">
+                  <!-- <button class="btn w-100" >Buy Now</button> -->
+                </div>
               </div>
             </div>
           </div>

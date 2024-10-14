@@ -1,6 +1,6 @@
 
 .btn {
-  padding: 10px 30px;
+  padding: 10px 14px;
   font-size: 16px;
   border-radius: 20px;
   background: rgba(25, 74, 25, 0.925);
@@ -56,10 +56,11 @@ h3 {
 }
 
 .card-img-top {
-  height: 80%;
-  width: 80%;
+  height: 100%;
+  width: 100%;
   object-fit: contain;
   mix-blend-mode: multiply;
+  padding: 20px;
 }
 
 h4 {
