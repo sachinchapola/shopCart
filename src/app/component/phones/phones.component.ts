@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../service/product.service';
 import { Router } from '@angular/router';
 import { BannerSectionComponent } from "../banner-section/banner-section.component";
+import { MatDialog } from '@angular/material/dialog';
+import { BuyPopComponent } from '../buy-pop/buy-pop.component';
 
 @Component({
   selector: 'app-phones',
@@ -16,7 +18,7 @@ export class PhonesComponent implements OnInit {
 
   getAllMoblies: any = [];
 
-  constructor(private productService: ProductService, private router: Router) { }
+  constructor(private productService: ProductService, private router: Router, private matDialog: MatDialog) { }
 
   ngOnInit(): void {
     this.productService.getAllProductList().subscribe((res) => {
@@ -29,5 +31,9 @@ export class PhonesComponent implements OnInit {
 
   onItemClick(id: any) {
     this.router.navigate(['/single-item'], {queryParams: {'key': id}});
+  }
+
+  buyNowPop() {
+    this.matDialog.open(BuyPopComponent)
   }
 }

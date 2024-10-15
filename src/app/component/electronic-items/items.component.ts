@@ -7,6 +7,8 @@ import { CartItem } from '../../dto/cartItem-interface';
 import { CartService } from '../../service/cart.service';
 import { ProductListInterface } from '../../dto/product-list-interface';
 import { BannerSectionComponent } from "../banner-section/banner-section.component";
+import { MatDialog } from '@angular/material/dialog';
+import { BuyPopComponent } from '../buy-pop/buy-pop.component';
 
 @Component({
   selector: 'app-items',
@@ -32,7 +34,8 @@ export class ItemsComponent implements OnInit {
     private productService: ProductService,
     private router: Router,
     private searchService: SearchService,
-    private cartService: CartService
+    private cartService: CartService,
+    private matDialog: MatDialog
   ) {}
 
   ngOnInit(): void {
@@ -74,31 +77,35 @@ export class ItemsComponent implements OnInit {
     return this.products.sort((a,b) => a.reviewsCount - b.reviewsCount);
   }
 
-  addToCart(id:any) {
+  // addToCart(id:any) {
     
-    const data = this.products;
+  //   const data = this.products;
 
-    const selectedData:ProductListInterface[] = data.filter(item => item.id === id);
-    console.log(`ItemsComponent addToCart id = ${id}`, selectedData);
+  //   const selectedData:ProductListInterface[] = data.filter(item => item.id === id);
+  //   console.log(`ItemsComponent addToCart id = ${id}`, selectedData);
     
-    if (selectedData.length ) {
-      this.productId = selectedData[0].id;
-      this.productName = selectedData[0].name;
-      this.productDesc = selectedData[0].description;
-      this.productPrice  = selectedData[0].price;
-      this.productImage = selectedData[0].images[0];
+  //   if (selectedData.length ) {
+  //     this.productId = selectedData[0].id;
+  //     this.productName = selectedData[0].name;
+  //     this.productDesc = selectedData[0].description;
+  //     this.productPrice  = selectedData[0].price;
+  //     this.productImage = selectedData[0].images[0];
       
-    }    
+  //   }    
 
-    const cartItem: CartItem = {
-      productId: this.productId,
-      name: this.productName,
-      description: this.productDesc,
-      price: this.productPrice,
-      quantity: this.productQty,
-      image: this.productImage
-    }
+  //   const cartItem: CartItem = {
+  //     productId: this.productId,
+  //     name: this.productName,
+  //     description: this.productDesc,
+  //     price: this.productPrice,
+  //     quantity: this.productQty,
+  //     image: this.productImage
+  //   }
 
-    this.cartService.addItems(cartItem);
+  //   this.cartService.addItems(cartItem);
+  // }
+
+  buyNowPop() {
+    this.matDialog.open(BuyPopComponent);
   }
 }

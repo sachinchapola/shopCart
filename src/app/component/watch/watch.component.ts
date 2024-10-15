@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { ProductService } from '../../service/product.service';
 import { CommonModule } from '@angular/common';
 import { BannerSectionComponent } from "../banner-section/banner-section.component";
+import { MatDialog } from '@angular/material/dialog';
+import { BuyPopComponent } from '../buy-pop/buy-pop.component';
 
 @Component({
   selector: 'app-watch',
@@ -16,7 +18,7 @@ export class WatchComponent implements OnInit{
 
   getAllWatches: any = [];
 
-  constructor(private productService: ProductService, private router: Router) { }
+  constructor(private productService: ProductService, private router: Router, private matDialg: MatDialog) { }
 
   ngOnInit(): void {
     this.productService.getAllProductList().subscribe((res) => {
@@ -29,5 +31,9 @@ export class WatchComponent implements OnInit{
 
   onItemClick(id: any) {
     this.router.navigate(['/single-item'], {queryParams: {'key': id}});
+  }
+
+  buyNowPop() {
+    this.matDialg.open(BuyPopComponent);
   }
 }

@@ -18,9 +18,9 @@
       </div>
 
       <div class="row mt-3">
-        <div class="col-12 col-lg-3 col-md-3 col-sm-12 mb-3" *ngFor="let product of filteredProducts">
-          <div class="card h-100 d-flex flex-column" (click)="onItemClick(product.id)">
-            <div class="img-section">
+        <div class="col-12 col-lg-4 col-md-6 col-sm-12 mb-3" *ngFor="let product of filteredProducts">
+          <div class="card h-100 d-flex flex-column">
+            <div class="img-section" (click)="onItemClick(product.id)">
               <img [src]="product.images[0]" class="card-img-top" alt="{{ product.category }}" />
             </div>
 
@@ -48,12 +48,12 @@
               </div>
 
               <div class="row">
-                <div class="">
+                <!-- <div class="">
                   <button class="btn w-100" (click)="addToCart(product.id)">Add to Cart</button>
-                  <!-- <button class="btn w-100">View deatils</button> -->
-                </div>
-                <div class="col-6">
-                  <!-- <button class="btn w-100" >Buy Now</button> -->
+                </div> -->
+                <div class="d-flex gap-2">
+                  <button class="btn w-100" (click)="onItemClick(product.id)">View deatils</button>
+                  <button class="btn w-100" (click)="buyNowPop()">Buy Now</button>
                 </div>
               </div>
             </div>

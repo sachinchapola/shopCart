@@ -9,9 +9,9 @@
       </div>
 
       <div class="row mt-3">
-        <div class="col-12 col-lg-3 col-md-3 col-sm-12 mb-3" *ngFor="let phone of getAllMoblies">
-          <div class="card h-100 d-flex flex-column" (click)="onItemClick(phone.id)">
-            <div class="img-section">
+        <div class="col-12 col-lg-4 col-md-6 col-sm-12 mb-3" *ngFor="let phone of getAllMoblies">
+          <div class="card h-100 d-flex flex-column">
+            <div class="img-section" (click)="onItemClick(phone.id)">
               <img [src]="phone.images[0]" class="card-img-top" alt="{{ phone.category }}" />
             </div>
 
@@ -38,10 +38,13 @@
                 </p>
               </div>
 
-              <div>
-                <!-- <button class="btn w-100" (click)="addToCart(laptop.id)">Add to Cart</button> -->
-                <button class="btn w-100">Add to Cart</button>
+              <div class="row">
+                <div class="d-flex gap-2">
+                  <button class="btn w-100" (click)="onItemClick(phone.id)">View Details</button>
+                  <button class="btn w-100" (click)="buyNowPop()">Buy Now</button>
+                </div>
               </div>
+
             </div>
           </div>
         </div>

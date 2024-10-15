@@ -3,6 +3,8 @@ import { ProductService } from '../../service/product.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { BannerSectionComponent } from "../banner-section/banner-section.component";
+import { MatDialog } from '@angular/material/dialog';
+import { BuyPopComponent } from '../buy-pop/buy-pop.component';
 
 @Component({
   selector: 'app-headphones',
@@ -16,7 +18,7 @@ export class HeadphonesComponent implements OnInit {
 
   getAllHeadphones: any = [];
 
-  constructor(private productService: ProductService, private router: Router) { }
+  constructor(private productService: ProductService, private router: Router, private matDialog: MatDialog) { }
 
   ngOnInit(): void {
     this.productService.getAllProductList().subscribe((res) => {
@@ -29,5 +31,9 @@ export class HeadphonesComponent implements OnInit {
 
   onItemClick(id : any) {
     this.router.navigate(['/single-item'], {queryParams: {'key': id}});
+  }
+
+  buyNowPop() {
+    this.matDialog.open(BuyPopComponent)
   }
 }

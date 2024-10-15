@@ -24,14 +24,14 @@
 }
 
 .search-group:hover {
-  width: 42rem;
+  width: 40rem;
 }
 
 .search-input {
   flex: 1;
   border: none;
   outline: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 2rem 0 0 2rem;
   background-color: #f7f7f7;
 }
@@ -74,4 +74,26 @@
   text-decoration: none;
   color: #000;
   border: none;
+}
+
+@media (max-width: 767px) {
+  .brand {
+    font-size: 26px;
+  }
+
+  .fa-bars {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .fa-bars {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .search-group:hover {
+    width: 32rem;
+  }
 }
