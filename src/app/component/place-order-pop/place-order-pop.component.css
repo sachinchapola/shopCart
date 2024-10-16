@@ -50,3 +50,27 @@
   transform: translateY(1px);
   box-shadow: 0.4px 0.8px rgba(0, 0, 0, 0.3);
 }
+
+@media (max-width: 767px) {
+  .check-mark {
+    width: 5rem;
+    height: 5rem;
+  }
+  
+  .fa-check {
+    font-size: 34px;
+  }
+
+  .place-order-alert h2 {
+    font-size: 18px;
+  }
+
+  .place-order-alert p {
+    font-size: 12px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 10px;
+  }
+}

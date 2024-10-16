@@ -23,10 +23,6 @@
   overflow: hidden;
 }
 
-.search-group:hover {
-  width: 40rem;
-}
-
 .search-input {
   flex: 1;
   border: none;
@@ -84,16 +80,21 @@
   .fa-bars {
     font-size: 20px;
   }
+
+  .font {
+    padding: 0;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .fa-bars {
     font-size: 30px;
   }
+
+  .font {
+    padding: 0;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  .search-group:hover {
-    width: 32rem;
-  }
 }

@@ -5,16 +5,18 @@ import { SearchService } from '../../service/search.service';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../../service/cart.service';
 import { Subscription } from 'rxjs';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu'
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule ,RouterModule, FormsModule],
+  imports: [CommonModule ,RouterModule, FormsModule, MatIconModule, MatMenuModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent implements OnInit, OnDestroy{
-  isSearchHovered: boolean = false;
+  isMenuOpen: boolean = false;
   cartItemCount: number = 0;
   private cartSubscription!: Subscription;
 
@@ -25,10 +27,6 @@ export class HeaderComponent implements OnInit, OnDestroy{
       this.cartItemCount = count;
       // console.log("cartzCount", this.cartItemCount);
     });
-  }
-
-  onSearchHover(state: boolean) {
-    this.isSearchHovered = state;
   }
 
   onSearchItems(searchQuery: string) {

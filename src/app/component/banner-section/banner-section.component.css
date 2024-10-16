@@ -71,3 +71,15 @@ h2 {
     mix-blend-mode: multiply;
   }
 }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  h2 {
+    font-size: 34px;
+  }
+
+  .header-content-img {
+    width: 50%;
+    height: auto;
+    mix-blend-mode: multiply;
+  }
+}

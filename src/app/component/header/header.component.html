@@ -21,20 +21,20 @@
         </div>
 
         <div class="col-6 d-flex align-items-center justify-content-between">
-          <div *ngIf="!isSearchHovered">
-            <a class="font" href="#">Deals</a>
+          <div>
+            <a class="font" routerLink="electronics-items">Deals</a>
           </div>
-          <div *ngIf="!isSearchHovered">
-            <a class="font" href="#">What's New</a>
+          <div>
+            <a class="font">What's New</a>
           </div>
 
-          <div *ngIf="!isSearchHovered">
+          <div>
             <a class="font">Delivery</a>
           </div>
 
           <div>
             <form (submit)="onSearchItems(searchInput.value)">
-              <div class="search-group" (mouseover)="onSearchHover(true)" (mouseout)="onSearchHover(false)">
+              <div class="search-group">
                 <input #searchInput class="search-input" type="text" aria-label="Search" placeholder="Search Product" />
                 <button class="search-btn" type="submit">
                   <i class="bi bi-search"></i>
@@ -59,66 +59,38 @@
           <div>
             <a class="brand" routerLink="electronics-items">Shopcart</a>
           </div>
-  
-          <div>
-            <i class="fa-solid fa-bars"></i>
-          </div>
-        </div>
 
-        <!-- <div class="col-2 dropdown">
-          <button class="btn dropdown-toggle font" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            Select categories
+          <button mat-icon-button [matMenuTriggerFor]="menu" class="p-0" style="border: none; background-color: #fff;">
+            <mat-icon>menu</mat-icon>
           </button>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" routerLink="/laptop">Laptop</a></li>
-            <li><a class="dropdown-item"routerLink="/headphones">Headphones</a></li>
-            <li><a class="dropdown-item" routerLink="/mobile">Mobile</a></li>
-            <li><a class="dropdown-item" routerLink="/watch">Watch</a></li>
-          </ul>
-        </div>
-        
-        <div class="col-6 d-flex align-items-center justify-content-around">
-          <div *ngIf="!isSearchHovered">
-            <a class="font" href="#">Deals</a>
-          </div>
-          <div  *ngIf="!isSearchHovered">
-            <a class="font" href="#">What's New</a>
-          </div>
-    
-          <div  *ngIf="!isSearchHovered">
-            <a class="font">Delivery</a>
-          </div>
-    
-          <div>
-            <form (submit)="onSearchItems(searchInput.value)">
-              <div class="search-group" (mouseover)="onSearchHover(true)" (mouseout)="onSearchHover(false)">
-                <input
-                  #searchInput
-                  class="search-input"
-                  type="text"
-                  aria-label="Search"
-                  placeholder="Search Product"
-                />
-                <button class="search-btn" type="submit">
-                  <i class="bi bi-search"></i>
-                </button>
-              </div>
-            </form>
-          </div>
+
+          <!-- Mat Menu -->
+          <mat-menu #menu="matMenu" class="mt-2">
+
+            <button mat-menu-item [matMenuTriggerFor]="selectCategory">select categories</button>
+
+            <mat-menu #selectCategory="matMenu">
+              <button mat-menu-item routerLink="/laptop">Laptop</button>
+              <button mat-menu-item routerLink="/headphones">Headphones</button>
+              <button mat-menu-item routerLink="/mobile">Mobile</button>
+              <button mat-menu-item routerLink="/watch">Watch</button>
+            </mat-menu>
+
+            <button mat-menu-item>
+              <a class="nav-link text-dark" routerLink="electronics-items">Deals</a>
+            </button>
+            <button mat-menu-item>
+              <a class="nav-link text-dark">What's New</a>
+            </button>
+            <button mat-menu-item>
+              <a class="nav-link text-dark">Delivery</a>
+            </button>
+          </mat-menu>
         </div>
 
-        <div class="col-2 cart d-flex justify-content-end gap-2" routerLink="cart">
-          <div class="count" *ngIf="cartItemCount">{{ cartItemCount }}</div>
-          <div>
-            <i class="fa-solid fa-cart-shopping" ></i>
-          </div>
-          <div class="cart-text">Cart</div>
-        </div> -->
       </div>
-
     </div>
   </div>
-</div>
 
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
