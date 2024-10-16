@@ -14,10 +14,10 @@
   mix-blend-mode: multiply;
 }
 
-hr {
+/* hr {
   position: relative;
   top: 0.7rem;
-}
+} */
 
 .detail-section h2 {
   font-size: 25px;
@@ -99,5 +99,30 @@ hr {
   border-radius: 8px;
   border: none;
   padding: 10px 20px;
+}
+
+@media (max-width: 767px) {
+  .img-section img {
+    height: 9rem;
+    width: 9rem;
+    padding: 10px;
+  }
+
+  .detail-section h2 {
+    font-size: 18px;
+  }
+
+  .detail-section .price {
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  .empty-cart .bi-cart-dash {
+    font-size: 5rem;
+  }
+  
+  .empty-cart h2 {
+    font-size: 22px;
+  }
 }
 

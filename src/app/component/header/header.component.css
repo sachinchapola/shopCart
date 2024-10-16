@@ -84,6 +84,7 @@
   .font {
     padding: 0;
   }
+  
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -97,4 +98,11 @@
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
+  .search-input {
+    padding: 0.5rem 1rem;
+  }
+
+  .font {
+    font-size: 14px;
+  }
 }
