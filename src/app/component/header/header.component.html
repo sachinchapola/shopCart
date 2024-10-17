@@ -1,95 +1,100 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-12 fixed-header">
-      <div class="row d-flex align-items-center p-3 d-none d-lg-flex">
+    <div class="col-12 fixed-header p-0">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-lg-flex">
+        <div class="container-fluid">
+          <a class="navbar-brand" routerLink="electronics-items">Shopcart</a>
+      
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav me-auto gap-3">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Select categories
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" routerLink="/laptop">Laptop</a></li>
+                  <li><a class="dropdown-item" routerLink="/headphones">Headphones</a></li>
+                  <li><a class="dropdown-item" routerLink="/mobile">Mobile</a></li>
+                  <li><a class="dropdown-item" routerLink="/watch">Watch</a></li>
+                </ul>
+              </li>
+      
+              <li class="nav-item">
+                <a class="nav-link" routerLink="electronics-items">Deals</a>
+              </li>
 
-        <div class="col-2">
-          <a class="brand" routerLink="electronics-items">Shopcart</a>
+              <li class="nav-item">
+                <a class="nav-link">What's New</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link">Delivery</a>
+              </li>
+
+              <form (submit)="onSearchItems(searchInput.value)">
+                <div class="search-group">
+                  <input #searchInput class="search-input" type="text" aria-label="Search" placeholder="Search Product" />
+                  <button class="search-btn" type="submit">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </div>
+              </form>
+            </ul>
+  
+            <div class="d-flex align-items-center" routerLink="cart">
+              <div class="count me-2" *ngIf="cartItemCount">{{ cartItemCount }}</div>
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="ms-1">Cart</span>
+            </div>
+          </div>
         </div>
-
-        <div class="col-2 dropdown">
-          <button class="btn dropdown-toggle font" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Select categories
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" routerLink="/laptop">Laptop</a></li>
-            <li><a class="dropdown-item" routerLink="/headphones">Headphones</a></li>
-            <li><a class="dropdown-item" routerLink="/mobile">Mobile</a></li>
-            <li><a class="dropdown-item" routerLink="/watch">Watch</a></li>
-          </ul>
-        </div>
-
-        <div class="col-6 d-flex align-items-center justify-content-between">
-          <div>
-            <a class="font" routerLink="electronics-items">Deals</a>
-          </div>
-          <div>
-            <a class="font">What's New</a>
-          </div>
-
-          <div>
-            <a class="font">Delivery</a>
-          </div>
-
-          <div>
-            <form (submit)="onSearchItems(searchInput.value)">
-              <div class="search-group">
-                <input #searchInput class="search-input" type="text" aria-label="Search" placeholder="Search Product" />
-                <button class="search-btn" type="submit">
-                  <i class="bi bi-search"></i>
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <div class="col-2 cart d-flex justify-content-end gap-2" routerLink="cart">
-          <div class="count" *ngIf="cartItemCount">{{ cartItemCount }}</div>
-          <div>
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-          <div class="cart-text">Cart</div>
-        </div>
-      </div>
+      </nav>
+      
 
       <!-- mobile view -->
       <div class="row d-lg-none">
-        <div class="d-flex justify-content-between align-items-center p-3">
+        <div class=" bg-light d-flex justify-content-between align-items-center p-mobile">
           <div>
             <a class="brand" routerLink="electronics-items">Shopcart</a>
           </div>
 
-          <button mat-icon-button [matMenuTriggerFor]="menu" class="p-0" style="border: none; background-color: #fff;">
-            <mat-icon>menu</mat-icon>
-          </button>
-
-          <!-- Mat Menu -->
-          <mat-menu #menu="matMenu" class="mt-2">
-
-            <button mat-menu-item [matMenuTriggerFor]="selectCategory">select categories</button>
-
-            <mat-menu #selectCategory="matMenu">
-              <button mat-menu-item routerLink="/laptop">Laptop</button>
-              <button mat-menu-item routerLink="/headphones">Headphones</button>
-              <button mat-menu-item routerLink="/mobile">Mobile</button>
-              <button mat-menu-item routerLink="/watch">Watch</button>
+          <div class="d-flex gap" >
+            <div class="" routerLink="cart">
+              <div class="m-count" *ngIf="cartItemCount">{{ cartItemCount }}</div>
+              <i *ngIf="cartItemCount" class="fa-solid fa-cart-shopping" style="position: fixed; top: 24px;"></i>
+            </div>
+  
+            <button mat-icon-button [matMenuTriggerFor]="menu" class="p-0" style="border: none; background-color: transparent;">
+              <mat-icon>menu</mat-icon>
+            </button>
+  
+            <!-- Mat Menu -->
+            <mat-menu #menu="matMenu" class="mt-2">
+  
+              <button mat-menu-item [matMenuTriggerFor]="selectCategory">select categories</button>
+  
+              <mat-menu #selectCategory="matMenu">
+                <button mat-menu-item routerLink="/laptop">Laptop</button>
+                <button mat-menu-item routerLink="/headphones">Headphones</button>
+                <button mat-menu-item routerLink="/mobile">Mobile</button>
+                <button mat-menu-item routerLink="/watch">Watch</button>
+              </mat-menu>
+  
+              <button mat-menu-item>
+                <a class="nav-link text-dark" routerLink="electronics-items">Deals</a>
+              </button>
+  
+              <button mat-menu-item>
+                <a class="nav-link text-dark">What's New</a>
+              </button>
+  
+              <button mat-menu-item>
+                <a class="nav-link text-dark">Delivery</a>
+              </button>
+              
             </mat-menu>
-
-            <button mat-menu-item>
-              <a class="nav-link text-dark" routerLink="electronics-items">Deals</a>
-            </button>
-
-            <button mat-menu-item>
-              <a class="nav-link text-dark">What's New</a>
-            </button>
-
-            <button mat-menu-item>
-              <a class="nav-link text-dark">Delivery</a>
-            </button>
-            
-
-          </mat-menu>
+          </div>
         </div>
 
       </div>

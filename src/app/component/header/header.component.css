@@ -7,7 +7,11 @@
   z-index: 999;
 }
 
-.brand {
+.p-all {
+  padding: 0;
+}
+
+.navbar-brand {
   font-size: 30px;
   font-weight: 500;
   font-family: sans-serif, Roboto;
@@ -63,46 +67,60 @@
   left: 26px;
 }
 
-.font {
-  font-size: 16px;
-  font-weight: 400;
-  font-family: sans-serif;
-  text-decoration: none;
-  color: #000;
-  border: none;
+.p-mobile {
+  padding: 14px 20px;
+}
+
+.gap {
+  gap: 36px;
 }
 
 @media (max-width: 767px) {
   .brand {
     font-size: 26px;
+    font-weight: 500;
+    font-family: sans-serif, Roboto;
+    text-decoration: none;
+    color: #000;
   }
 
-  .fa-bars {
-    font-size: 20px;
+  .p-all {
+    padding: 0 12px;
   }
 
-  .font {
-    padding: 0;
+  .fa-cart-shopping {
+    font-size: 18px;
   }
-  
+
+  .m-count {
+    position: relative;
+    top: -14px;
+    left: 6px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .fa-bars {
-    font-size: 30px;
+  .brand {
+    font-size: 26px;
+    font-weight: 500;
+    font-family: sans-serif, Roboto;
+    text-decoration: none;
+    color: #000;
   }
 
-  .font {
-    padding: 0;
+  .fa-cart-shopping {
+    font-size: 18px;
+  }
+
+  .m-count {
+    position: relative;
+    top: -14px;
+    left: 6px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .search-input {
     padding: 0.5rem 1rem;
-  }
-
-  .font {
-    font-size: 14px;
   }
 }
