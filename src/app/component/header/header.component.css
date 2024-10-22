@@ -61,10 +61,8 @@
   font-weight: 600;
 }
 
-.count {
-  position: relative;
-  top: -20px;
-  left: 26px;
+.font-12 {
+  font-size: 12px;
 }
 
 .p-mobile {
@@ -72,7 +70,7 @@
 }
 
 .gap {
-  gap: 36px;
+  gap: 20px;
 }
 
 @media (max-width: 767px) {
@@ -91,12 +89,6 @@
   .fa-cart-shopping {
     font-size: 18px;
   }
-
-  .m-count {
-    position: relative;
-    top: -14px;
-    left: 6px;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -110,12 +102,6 @@
 
   .fa-cart-shopping {
     font-size: 18px;
-  }
-
-  .m-count {
-    position: relative;
-    top: -14px;
-    left: 6px;
   }
 }
 

@@ -3,7 +3,6 @@ import { ProductService } from '../../service/product.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { SearchService } from '../../service/search.service';
-import { CartItem } from '../../dto/cartItem-interface';
 import { CartService } from '../../service/cart.service';
 import { ProductListInterface } from '../../dto/product-list-interface';
 import { BannerSectionComponent } from "../banner-section/banner-section.component";

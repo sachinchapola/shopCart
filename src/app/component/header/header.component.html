@@ -43,8 +43,12 @@
             </ul>
   
             <div class="d-flex align-items-center" routerLink="cart">
-              <div class="count me-2" *ngIf="cartItemCount">{{ cartItemCount }}</div>
-              <i class="fa-solid fa-cart-shopping"></i>
+              <!-- <div class="count me-2" *ngIf="cartItemCount">{{ cartItemCount }}</div> -->
+              <i class="fa-solid fa-cart-shopping">
+                <span *ngIf="cartItemCount" class="position-absolute translate-middle badge rounded-pill bg-danger" style="font-size: 12px; top: 16px;">
+                  {{ cartItemCount }}
+                </span>
+              </i>
               <span class="ms-1">Cart</span>
             </div>
           </div>
@@ -61,8 +65,12 @@
 
           <div class="d-flex gap" >
             <div class="" routerLink="cart">
-              <div class="m-count" *ngIf="cartItemCount">{{ cartItemCount }}</div>
-              <i *ngIf="cartItemCount" class="fa-solid fa-cart-shopping" style="position: fixed; top: 24px;"></i>
+              <!-- <div class="m-count" *ngIf="cartItemCount">{{ cartItemCount }}</div> -->
+              <i class="fa-solid fa-cart-shopping" *ngIf="cartItemCount">
+                <span  class="position-absolute translate-middle badge rounded-pill bg-danger" style="font-size: 9px; top: 16px;">
+                  {{ cartItemCount }}
+                </span>
+              </i>
             </div>
   
             <button mat-icon-button [matMenuTriggerFor]="menu" class="p-0" style="border: none; background-color: transparent;">
